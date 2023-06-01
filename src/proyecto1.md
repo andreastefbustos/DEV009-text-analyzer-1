@@ -11,3 +11,5 @@ Pasos de la realición del proyecto
 3. Luego se utilizó la etiqueta `<textarea>` que se utiliza en HTML para crear un área de texto editable en la que los usuarios pueden ingresar y editar texto de varias líneas.
 
 4. La etiqueta `<ul>` en HTML se utiliza para crear una lista desordenada. Una lista desordenada es un conjunto de elementos de lista que no tienen un orden específico y se presentan con viñetas o puntos. Es importante destacar que cada elemento de lista debe estar contenido dentro de un `<li>` y que la etiqueta `<ul>` solo debe contener elementos `<li>` como hijos directos. La etiqueta `<ul>` puede estar engloba en una etiquera `<div>` que se utiliza para crear un contenedor genérico en HTML que puede agrupar y organizar otros elementos dentro de él.
+
+5. Implementación de la etiqueta `<footer>` que representa el pie de página de un documento o una sección de contenido. 
