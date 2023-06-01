@@ -6,12 +6,15 @@ Pasos de la realición del proyecto
 
 ![PROTOTIPO BAJA FIDELIDAD](/prototipo-bf-p1.png)
 
-2. Implementación de la etiqueta `<article>` en HTML es un elemento semántico utilizado para marcar una sección de contenido independiente y autónomo dentro de un documento HTML. Representa una composición autocontenida que puede ser distribuida, reutilizada o enlazada de forma independiente. La etiqueta `<article>` ayuda a estructurar y organizar el contenido de la página, y también proporciona información semántica a los motores de búsqueda y tecnologías de asistencia. Al utilizar la etiqueta `<article>`, se indica que ese contenido específico es importante y merece ser tratado como una unidad coherente. Dentro de esta etiqueta, se inserto la etiqueta `<header>` y `<h1>`.
+2. Implementación de la etiqueta `<header>` y `<h1>`. La etiqueta `<header>` en HTML se utiliza para marcar la sección de encabezado o cabecera de un documento HTML o una sección de contenido específica. Representa información introductoria o de navegación que generalmente se encuentra en la parte superior de la página. Por otra parte la etiqueta `<h1>` se utiliza para definir los títulos.
 
-3. Luego se utilizó la etiqueta `<textarea>` que se utiliza en HTML para crear un área de texto editable en la que los usuarios pueden ingresar y editar texto de varias líneas.
+3. La etiqueta `<ul>` en HTML se utiliza para crear una lista desordenada. Una lista desordenada es un conjunto de elementos de lista que no tienen un orden específico y se presentan con viñetas o puntos. Es importante destacar que cada elemento de lista debe estar contenido dentro de un `<li>` y que la etiqueta `<ul>` solo debe contener elementos `<li>` como hijos directos.
 
-4. La etiqueta `<ul>` en HTML se utiliza para crear una lista desordenada. Una lista desordenada es un conjunto de elementos de lista que no tienen un orden específico y se presentan con viñetas o puntos. Es importante destacar que cada elemento de lista debe estar contenido dentro de un `<li>` y que la etiqueta `<ul>` solo debe contener elementos `<li>` como hijos directos. La etiqueta `<ul>` puede estar engloba en una etiquera `<div>` que se utiliza para crear un contenedor genérico en HTML que puede agrupar y organizar otros elementos dentro de él.
+4. Luego se utilizó la etiqueta `<textarea>` que se utiliza en HTML para crear un área de texto editable en la que los usuarios pueden ingresar y editar texto de varias líneas.
 
-5. Implementación de la etiqueta `<footer>` que representa el pie de página de un documento o una sección de contenido.
+5. Implementación del uso de la etiqueta `<button>` para permitirle al usuario, mediante un clic, limpiar el contenido de la caja. 
 
-6. Implementación del uso de la etiqueta `<button>` para permitirle al usuario, mediante un clic, limpiar el contenido de la caja. 
+6. Implementación de la etiqueta `<footer>` que representa el pie de página de un documento o una sección de contenido.
+
+
+

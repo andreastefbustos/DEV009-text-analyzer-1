@@ -8,35 +8,28 @@
 </head>
 
 <body>
-  <article class="header">
-    <header>
-      <h1>
-        Analizador de Texto
-      </h1>
-    </header>
-  </article>
+  <header>
+    <h1>
+      Analizador de Texto
+    </h1>
+  </header>
 
-  <label for="text"></label>
-  <textarea name="user-input" id="text" cols="30" rows="10"></textarea>
-
-  <div id="metrics">
-    <ul>
-      <li>Caracteres:</li>
-      <li>Caracteres sin Espacios:</li>
-      <li>Palabras:</li>
-      <li>Números:</li>
-      <li>Suma Números:</li>
-      <li>Promedio longitud:</li>
-    </ul>
-  </div>
-
-  <div id="footer">
-    <footer>
-      <p>Autor: Andrea Bustos</p>
-    </footer>
-  </div>
-
+  <ul>
+    <li>Caracteres:</li>
+    <li>Caracteres sin Espacios:</li>
+    <li>Palabras:</li>
+    <li>Números:</li>
+    <li>Suma Números:</li>
+    <li>Promedio longitud:</li>
+  </ul>
+  
+  <textarea name="user-input" id="user-input" cols="30" rows="10"></textarea>
+  
   <button id="reset-button">Limpiar métricas</button>
+  
+  <footer>
+    <p>Autor: Andrea Bustos</p>
+  </footer>
   
   <script src="index.js" type="module"></script>
 </body>
