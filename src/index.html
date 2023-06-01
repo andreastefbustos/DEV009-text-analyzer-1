@@ -8,7 +8,36 @@
 </head>
 
 <body>
-  <h1>Hola</h1>
+  <article class="header">
+    <header>
+      <h1>
+        Analizador de Texto
+      </h1>
+    </header>
+  </article>
+
+  <label for="text"></label>
+  <textarea name="user-input" id="text" cols="30" rows="10"></textarea>
+
+  <div id="metrics">
+    <ul>
+      <li>Caracteres:</li>
+      <li>Caracteres sin Espacios:</li>
+      <li>Palabras:</li>
+      <li>Números:</li>
+      <li>Suma Números:</li>
+      <li>Promedio longitud:</li>
+    </ul>
+  </div>
+
+  <div id="footer">
+    <footer>
+      <p>Autor: Andrea Bustos</p>
+    </footer>
+  </div>
+
+  <button id="reset-button">Limpiar métricas</button>
+  
   <script src="index.js" type="module"></script>
 </body>
 </html>
