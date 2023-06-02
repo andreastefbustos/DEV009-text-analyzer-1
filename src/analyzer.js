@@ -61,11 +61,11 @@ const analyzer = {
   },
 };
 
-console.log(analyzer.getWordCount("Conteo de palabras, caracteres y números June 2, 2023."));
-console.log(analyzer.getCharacterCount("Conteo de palabras, caracteres y números June 2, 2023."));
-console.log(analyzer.getCharacterCountExcludingSpaces("Conteo de palabras, caracteres y números June 2, 2023."));
-console.log(analyzer.getAverageWordLength("Conteo de palabras, caracteres y números June 2, 2023."));
-console.log(analyzer.getNumberCount("Conteo de palabras, caracteres y números June 2, 2023."));
-console.log(analyzer.getNumberSum("Conteo de palabras, caracteres y números June 2, 2023."));
+// console.log(analyzer.getWordCount("Conteo de palabras, caracteres y números June 2, 2023."));
+// console.log(analyzer.getCharacterCount("Conteo de palabras, caracteres y números June 2, 2023."));
+// console.log(analyzer.getCharacterCountExcludingSpaces("Conteo de palabras, caracteres y números June 2, 2023."));
+// console.log(analyzer.getAverageWordLength("Conteo de palabras, caracteres y números June 2, 2023."));
+// console.log(analyzer.getNumberCount("Conteo de palabras, caracteres y números June 2, 2023."));
+// console.log(analyzer.getNumberSum("Conteo de palabras, caracteres y números June 2, 2023."));
 
 export default analyzer;
