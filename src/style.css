@@ -1,0 +1,51 @@
+body {
+    background-color: seashell;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+header {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    margin: 50px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+}
+li {
+    display: inline-block;
+    background-color: #eaeaea;
+    color: #333333;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+span {
+    color: coral;
+}
+textarea[name="user-input"] {
+    border: 1px solid #ccc;
+    height: auto;
+    line-height: 1.6;
+    margin: 50px;
+    border-color: blue;
+}
+#reset-button {
+    margin-bottom: 50px;
+}
+footer {
+    font-size: small;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 50px;
+} 
