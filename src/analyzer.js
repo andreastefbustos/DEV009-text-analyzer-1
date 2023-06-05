@@ -12,7 +12,42 @@ const analyzer = {
   },
   getCharacterCountExcludingSpaces: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
-    let characterCountExcludingSpaces = text.replace(/[^\w\s]|_/g, "").replace(/\s+/g, "").trim().length;
+    
+    // 1. Forma de realizarlo con expresiones regulares
+    // let characterCountExcludingSpaces = text.replace(/[^\w\s]|_/g, "").replace(/\s+/g, "").trim().length;
+    // return characterCountExcludingSpaces;
+
+    // 2. Otra forma de realizarlo, declarando una variable con todos los signos de puntación, y realizando un for
+
+    //Definir los signos de puntación que se desean excluir.
+    const punctuation = [",", ".", "!", "?", ";", ":", "-", "'", '"', "{", "}", "+", "=", "<", ">", "$", "#", "@", "%", "^", "*", "(", ")", "_", "|", "~", "`", "&", "[", "]", "/"];
+
+    //funcion para  verificar si un carácter es un signo de puntación 
+    function isPunctuation(char) {
+      for(let i = 0; i < punctuation.length; i++) {
+        if (char === punctuation[i]) {
+          return true;
+        }
+      }
+      
+      return false;
+    }
+
+    //Eliminar espacios y signos de puntación 
+    let cleanedText = " ";
+
+    for (let i = 0; i < text.length; i++) {
+      let char = text[i];
+
+      if (char !== " " && !isPunctuation(char)) {
+        cleanedText += char;
+      }
+    }
+
+    //Eliminar espacios en blanco al principio y al final
+    let characterCountExcludingSpaces = cleanedText.trim().length;
+
+    //Retormar la cantidad de caracteres en el texto resultante
     return characterCountExcludingSpaces;
   },
   getAverageWordLength: (text) => {    

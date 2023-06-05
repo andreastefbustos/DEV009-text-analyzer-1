@@ -18,39 +18,45 @@ Pasos de la realición del proyecto
 
 7. Implementación de las funcionalidades.
 
-- **Recuento de palabras:** la aplicación cuenta el número de palabras en el texto de entrada y muestra este recuento al usuario. Trabajando así de la siguiente manera. 
+## **Recuento de palabras:** 
+
+La aplicación cuenta el número de palabras en el texto de entrada y muestra este recuento al usuario. Trabajando así de la siguiente manera. 
 
 ```js
 getWordCount: (text) => {
-//La función recibe un parámetro 'text' que es de tipo string y representa el texto de entrada.
-
-// Se utiliza el método 'split(" ")' para dividir el texto en palabras. El separador utilizado es un espacio en blanco.
-// Esto devuelve un array de palabras.
-    const words = text.split(" ");
-
-// Se obtiene la longitud del array de palabras, que corresponde al número de palabras en el texto.
-    const wordCount = words.length;
-
-// Se devuelve el valor de 'wordCount', que representa el recuento de palabras en el texto.
-    return wordCount;
+  const words = text.split(" ");
+  const wordCount = words.length;
+  return wordCount;
 }
 ```
+*Explicación paso a paso del código:*
 
-- **Recuento de caracteres:** la aplicación cuenta el número de caracteres en el texto de entrada, incluidos espacios y signos de puntuación, y muestra este recuento al usuario.
+1. La función recibe un parámetro `text` que es de tipo string y representa el texto de entrada.
+2. `const words = text.split(" ")`; se utiliza el método `split(" ")` para dividir el texto en palabras. El separador utilizado es un espacio en blanco.
+3. Esto devuelve un array de palabras.
+4. `const wordCount = words.length`; se obtiene la longitud del array de palabras, que corresponde al número de palabras en el texto.
+5. Se devuelve el valor de `wordCount`, que representa el recuento de palabras en el texto
+
+## **Recuento de caracteres:** 
+
+La aplicación cuenta el número de caracteres en el texto de entrada, incluidos espacios y signos de puntuación, y muestra este recuento al usuario.
 
 ```js
 getCharacterCount: (text) => {
-// La función recibe un parámetro 'text' que es de tipo string y representa el texto de entrada.
-
-// Se utiliza la propiedad 'length' para obtener la longitud del texto, que corresponde al número de caracteres.
-    const charaterCount = text.length;
-
-// Se devuelve el valor de 'characterCount', que representa el recuento de caracteres en el texto.
-    return charaterCount;
+  const charaterCount = text.length;
+  return charaterCount;
 }
 ```
 
-- **Recuento de caracteres excluyendo espacios y signos de puntuación:** la aplicación debe cuenta el número de caracteres en el texto de entrada, excluyendo espacios y signos de puntuación, y muestra este recuento al usuario.
+*Explicación paso a paso del código:*
+
+1. La función recibe un parámetro 'text' que es de tipo string y representa el texto de entrada.
+2. `const charaterCount = text.length`; se utiliza la propiedad 'length' para obtener la longitud del texto, que corresponde al número de caracteres.
+3. Se devuelve el valor de `characterCount`, que representa el recuento de caracteres en el texto.
+
+## **Recuento de caracteres excluyendo espacios y signos de puntuación:** 
+
+La aplicación debe cuenta el número de caracteres en el texto de entrada, excluyendo espacios y signos de puntuación, y muestra este recuento al usuario.
 
 ```js
 getCharacterCountExcludingSpaces: (text) => {
@@ -59,6 +65,8 @@ getCharacterCountExcludingSpaces: (text) => {
     return characterCountExcludingSpaces;
 }
 ```
+
+*Explicación paso a paso del código:*
 
 A. `text.replace(/[^\w\s]|_/g, "")`: Esta línea utiliza el método replace en el texto text para reemplazar ciertos caracteres. La expresión regular `/[^\w\s]|_/g` busca caracteres que no son alfanuméricos (`[^\w\s]`) o el guion bajo (`_`). La `g` al final indica que se deben buscar todas las ocurrencias. Estos caracteres encontrados son reemplazados por una cadena vacía, es decir, se eliminan del texto.
 
@@ -99,31 +107,78 @@ C. `.trim().length`: Finalmente, se aplica el método `trim` al texto para elimi
 
 En resumen, esta función `getCharacterCountExcludingSpaces` retorna la cantidad de caracteres en el texto `text`, excluyendo los espacios en blanco y los caracteres no alfanuméricos.
 
-- **Recuento de números:** la aplicación cuenta cúantos números hay en el texto de entrada y muestra este recuento al usuario.
+Otra manera de realizar el código:
+
+```js
+getCharacterCountExcludingSpaces: (text) => {
+  const punctuation = [",", ".", "!", "?", ";", ":", "-", "'", '"', "{", "}", "+", "=", "<", ">", "$", "#", "@", "%", "^", "*", "(", ")", "_", "|", "~", "`", "&", "[", "]", "/"];
+  
+  function isPunctuation(char) {
+    for(let i = 0; i < punctuation.length; i++) {
+      if (char === punctuation[i]) {
+        return true;
+      }
+    }
+    
+    return false;
+  }
+
+  let cleanedText = " ";
+
+  for (let i = 0; i < text.length; i++) {
+    let char = text[i];
+
+    if (char !== " " && !isPunctuation(char)) {
+      cleanedText += char;
+    }
+  }
+
+  let characterCountExcludingSpaces = cleanedText.trim().length;
+
+  return characterCountExcludingSpaces;
+}
+```
+
+*Explicación paso a paso del código:* 
+
+1. Se define un array `punctuation` que contiene los signos de puntuación que queremos excluir.
+2. Se declara una función `isPunctuation` que recibe un carácter `char` y verifica si es un signo de puntuación. La función itera sobre el array `punctuation` y compara cada elemento con el carácter. Si encuentra una coincidencia, devuelve `true`. Si no encuentra ninguna coincidencia al final del bucle, devuelve `false`.
+3. Se inicializa la variable `cleanedText` como una cadena vacía.
+4. Se itera sobre cada carácter del texto de entrada utilizando un bucle `for`. En cada iteración, se comprueba si el carácter no es un espacio en blanco y no es un signo de puntuación utilizando la función `isPunctuation`. Si cumple esta condición, se agrega el carácter a la variable `cleanedText`.
+5. Después de completar el bucle, se elimina cualquier espacio en blanco adicional al principio o al final de la cadena `cleanedText` utilizando el método `trim()`.
+6. Se obtiene la longitud de la cadena `cleanedText` y se asigna a la variable `characterCountExcludingSpaces`.
+7. Se retorna el valor de `characterCountExcludingSpaces`.
+
+En resumen, esta función recorre el texto de entrada carácter por carácter, excluyendo los espacios en blanco y los signos de puntuación, y cuenta la cantidad de caracteres resultante.
+
+## **Recuento de números:** 
+
+La aplicación cuenta cúantos números hay en el texto de entrada y muestra este recuento al usuario.
 
 ```js
 getNumberCount: (text) => {
-// La función recibe un parámetro 'text' que es de tipo string y representa el texto de entrada.
-
-// Se inicializa la variable 'numberCount' con el valor 0. Esta variable se utilizará para contar los números encontrados.   
+  let numberCount = 0;
+  
+  for(let i = 0; i <= text.length; i++){
+    let char = text[i];
     
-    let numberCount = 0;
-
-// Se itera sobre cada carácter del texto utilizando un bucle 'for'.  
-    for(let i = 0; i <= text.length; i++){
-      let char = text[i];
-
-// Se verifica si el carácter actual es un número utilizando la función 'isNaN' (is Not a Number) junto con 'parseInt'.
-// 'parseInt' convierte el carácter a un número entero. Si el resultado de 'parseInt' no es un número válido, significa que el carácter no es un dígito numérico.
-// Si el carácter es un dígito numérico, se incrementa el contador 'numberCount'.
     if (!isNaN(parseInt(char))) {
       numberCount++; 
     }
+  }
 
-// Se devuelve el valor de 'numberCount', que representa el recuento de dígitos numéricos en el texto.
-    return numberCount;
+  return numberCount;
 }
 ```
+
+*Explicación paso a paso del código:*
+
+1. La función recibe un parámetro `text` que es de tipo string y representa el texto de entrada.
+2. Se inicializa la variable `numberCount` con el valor 0. Esta variable se utilizará para contar los números encontrados.
+3. Se itera sobre cada carácter del texto utilizando un bucle `for`.
+4. Se verifica si el carácter actual es un número utilizando la función `isNaN` (is Not a Number) junto con `parseInt`. El `parseInt` convierte el carácter a un número entero. Si el resultado de `parseInt` no es un número válido, significa que el carácter no es un dígito numérico.
+5. Si el carácter es un dígito numérico, se incrementa el contador `numberCount`.
+6. Se devuelve el valor de `numberCount`, que representa el recuento de dígitos numéricos en el texto.
 
 **Explicación sobre esta línea de código**
 ```js
@@ -132,81 +187,73 @@ let char = text[i];
 
 Se está creando una variable llamada `char` y se le asigna el valor del carácter en la posición `i` del texto.
 
-i. `text` es el parámetro de entrada que representa el texto que se está procesando.
-
-ii. `text[i]` accede al carácter en la posición `i` del texto. La notación de corchetes ([]) se utiliza para acceder a un carácter específico en una cadena (texto). El índice `i` representa la posición del carácter en el texto, comenzando desde 0.
-
-iii. `let char = text[i]` crea una nueva variable llamada `char` y se le asigna el valor del carácter en la posición `i` del texto.
+* `text` es el parámetro de entrada que representa el texto que se está procesando.
+* `text[i]` accede al carácter en la posición `i` del texto. La notación de corchetes ([]) se utiliza para acceder a un carácter específico en una cadena (texto). El índice `i` representa la posición del carácter en el texto, comenzando desde 0.
+* `let char = text[i]` crea una nueva variable llamada `char` y se le asigna el valor del carácter en la posición `i` del texto.
 
 Por ejemplo, si tenemos el texto `"Hola"`, en la primera iteración del bucle (cuando `i` es igual a 0), la línea `let char = text[i]`; se traduce en `let char = "H"`. En la segunda iteración (cuando `i` es igual a 1), se traduce en `let char = "o"`, y así sucesivamente.
 
 La variable `char` se utiliza posteriormente en el código para realizar ciertas operaciones o comprobaciones con el carácter actual del texto.
 
-- **Suma total de números:** la aplicación cuenta todos los números que hay en el texto de entrada y muestra el resultado al usuario.
+## **Suma total de números:** 
+
+La aplicación cuenta todos los números que hay en el texto de entrada y muestra el resultado al usuario.
 
 ```js
 getNumberSum: (text) => {
-    
-    let numberSum = 0;
-    
-    for(let i = 0; i <= text.length; i++){
-      let char = text[i];
+  let numberSum = 0;
+  
+  for(let i = 0; i <= text.length; i++){
+    let char = text[i];
 
-      if(!isNaN(parseInt(char))){
-        numberSum += parseInt(char)
-      } 
-    }
-
-    return numberSum;
+    if(!isNaN(parseInt(char))){
+      numberSum += parseInt(char)
+    } 
   }
-```
-
-i. La función `getNumberSum` recibe un parámetro `text`, que es una cadena de texto en la que queremos buscar números y calcular su suma.
-
-ii. La variable `numberSum` se inicializa como 0 y se utilizará para almacenar la suma total de los números encontrados.
-
-iii. Luego, se itera a través de cada carácter del texto utilizando un bucle `for`, comenzando desde `i = 0 hasta` `i <= text.length`.
-
-iv. En cada iteración, se extrae el carácter actual del texto utilizando `text[i]` y se almacena en la variable `char`.
-
-v. La condición `!isNaN(parseInt(char))` verifica si el carácter es un número. `parseInt(char)` intenta convertir el carácter en un número entero. Si el carácter no puede ser convertido en un número válido, parseInt devuelve `NaN` (Not a Number). Por lo tanto, `!isNaN(parseInt(char))` devuelve true si el carácter es un número y false si no lo es.
-
-vi. Si el carácter es un número, se suma su valor a la variable `numberSum` utilizando `numberSum += parseInt(char)`.
-
-vii. Después de iterar a través de todos los caracteres del texto, la función devuelve el valor final de `numberSum`, que representa la suma de todos los números encontrados en el texto.
-
-- **Longitud media de las palabras:** la aplicación calcula la longitud media de las palabras en el texto de entrada y se la muestra al usurio al usuario.
-
-```js
-getAverageWordLength: (text) => {    
-    
-    const words = text.split(" ");
-    let sum = 0;
-
-    for (let i = 0; i < words.length; i++) {
-      sum += words[i].length;
-    }
-
-    const averageWordLength = sum / words.length;
-    const averageWordLengthRounded = Math.round(averageWordLength);
-
-    return averageWordLengthRounded;
+  
+  return numberSum;
 }
 ```
 
-i. La función getAverageWordLength recibe un parámetro `text`, que es una cadena de texto.
+*Explicación paso a paso del código:*
 
-ii. Utiliza el método `split(" ")` para dividir el texto en palabras. Esto crea un arreglo llamado `words` donde cada elemento es una palabra del texto.
+1. La función `getNumberSum` recibe un parámetro `text`, que es una cadena de texto en la que queremos buscar números y calcular su suma.
+2. La variable `numberSum` se inicializa como 0 y se utilizará para almacenar la suma total de los números encontrados.
+3. Luego, se itera a través de cada carácter del texto utilizando un bucle `for`, comenzando desde `i = 0 hasta` `i <= text.length`.
+4. En cada iteración, se extrae el carácter actual del texto utilizando `text[i]` y se almacena en la variable `char`.
+5. La condición `!isNaN(parseInt(char))` verifica si el carácter es un número. `parseInt(char)` intenta convertir el carácter en un número entero. Si el carácter no puede ser convertido en un número válido, parseInt devuelve `NaN` (Not a Number). Por lo tanto, `!isNaN(parseInt(char))` devuelve true si el carácter es un número y false si no lo es.
+6. Si el carácter es un número, se suma su valor a la variable `numberSum` utilizando `numberSum += parseInt(char)`.
+7. Después de iterar a través de todos los caracteres del texto, la función devuelve el valor final de `numberSum`, que representa la suma de todos los números encontrados en el texto.
 
-iii. Se inicializa la variable `sum` en 0 para almacenar la suma de las longitudes de las palabras.
+## **Longitud media de las palabras:** 
 
-iv. Se itera sobre cada palabra en el arreglo `words` utilizando un bucle `for`. En cada iteración, se agrega la longitud de la palabra actual al valor de sum mediante `words[i].length`.
+La aplicación calcula la longitud media de las palabras en el texto de entrada y se la muestra al usurio al usuario.
 
-v. Después de completar el bucle, se calcula la longitud promedio dividiendo la suma (`sum`) entre la cantidad de palabras (`words.length`).
+```js
+getAverageWordLength: (text) => {    
+  const words = text.split(" ");
+  let sum = 0;
 
-vi. Para redondear la longitud promedio al número entero más cercano, se utiliza `Math.round(averageWordLength)`.
+  for (let i = 0; i < words.length; i++) {
+    sum += words[i].length;
+  }
 
-vii. Finalmente, se retorna la longitud promedio redondeada
+  const averageWordLength = sum / words.length;
+  const averageWordLengthRounded = Math.round(averageWordLength);
+
+  return averageWordLengthRounded;
+}
+```
+
+*Explicación paso a paso del código:*
+
+1. La función getAverageWordLength recibe un parámetro `text`, que es una cadena de texto.
+2. Utiliza el método `split(" ")` para dividir el texto en palabras. Esto crea un arreglo llamado `words` donde cada elemento es una palabra del texto.
+3. Se inicializa la variable `sum` en 0 para almacenar la suma de las longitudes de las palabras.
+4. Se itera sobre cada palabra en el arreglo `words` utilizando un bucle `for`. En cada iteración, se agrega la longitud de la palabra actual al valor de sum mediante `words[i].length`.
+5. Después de completar el bucle, se calcula la longitud promedio dividiendo la suma (`sum`) entre la cantidad de palabras (`words.length`).
+6. Para redondear la longitud promedio al número entero más cercano, se utiliza `Math.round(averageWordLength)`.
+7. Finalmente, se retorna la longitud promedio redondeada
 
 De esta manera, la función obtiene y devuelve la longitud promedio de las palabras en el texto, redondeada al número entero más cercano.
 
