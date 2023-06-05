@@ -60,6 +60,45 @@ getCharacterCountExcludingSpaces: (text) => {
 }
 ```
 
+A. `text.replace(/[^\w\s]|_/g, "")`: Esta línea utiliza el método replace en el texto text para reemplazar ciertos caracteres. La expresión regular `/[^\w\s]|_/g` busca caracteres que no son alfanuméricos (`[^\w\s]`) o el guion bajo (`_`). La `g` al final indica que se deben buscar todas las ocurrencias. Estos caracteres encontrados son reemplazados por una cadena vacía, es decir, se eliminan del texto.
+
+***Explicación paso a paso de la expresión regular `/[^\w\s]|_/g`***
+
+1. `/`: Las expresiones regulares en JavaScript se delimitan por barras diagonales /. Esta barra diagonal indica el inicio de la expresión regular.
+2. `[^\w\s]`: Los corchetes [] se utilizan para definir una clase de caracteres. En este caso, `^\w\s` es la clase de caracteres.
+  - `^\w`: El acento ^ dentro de una clase de caracteres negada indica que se deben excluir los caracteres que coincidan con esta clase.
+  - `\w`: El caracter `\w` representa cualquier carácter alfanumérico, es decir, letras del alfabeto (mayúsculas y minúsculas) y dígitos del 0 al 9.
+  - `\s`: El caracter `\s` representa cualquier espacio en blanco, incluyendo espacios, tabulaciones y saltos de línea.
+
+Entonces, `[^\w\s]` representa cualquier carácter que no sea alfanumérico ni un espacio en blanco.
+
+3. `|`: El símbolo de barra vertical `|` se utiliza para indicar una alternativa. En este caso, la alternativa es `_`, que es el guion bajo.
+4. `_/g`: Después del símbolo de barra vertical viene `_`, que representa el guion bajo. Esta alternativa se utiliza para incluir el guion bajo como parte de la expresión regular.
+5. `/`: La barra diagonal indica el final de la expresión regular.
+6. `g`: La `g` al final de la expresión regular indica que la búsqueda debe realizarse de forma global, es decir, encontrar todas las ocurrencias en lugar de detenerse después de encontrar la primera coincidencia.
+
+En resumen, la expresión regular `/[^\w\s]|_/g` busca cualquier carácter que no sea alfanumérico ni un espacio en blanco, o el guion bajo, y se utiliza para realizar reemplazos en el texto en la función `getCharacterCountExcludingSpaces`.
+
+B. `.replace(/\s+/g, "")`: Después de haber realizado el reemplazo anterior, esta línea se encarga de eliminar los espacios en blanco adicionales que puedan haber quedado en el texto. La expresión regular `/\s+/g` busca una o más ocurrencias de espacios en blanco consecutivos y los reemplaza por una cadena vacía.
+
+***Explicación paso a paso de la expresión regular `/\s+/g`***
+
+1. `/`: Al igual que en el caso anterior, la barra diagonal indica el inicio de la expresión regular.
+2. `\s+`: Aquí tenemos el caracter `\s` seguido del símbolo `+`.
+  - `\s`: El caracter `\s` representa cualquier espacio en blanco, incluyendo espacios, tabulaciones y saltos de línea.
+  - `+`: El símbolo `+` indica que el espacio en blanco puede aparecer una o más veces de forma consecutiva.
+
+En resumen, `\s+` representa una o más repeticiones de espacios en blanco consecutivos.
+
+3. `/`: La barra diagonal indica el final de la expresión regular.
+4. `g`: Al igual que antes, la `g` al final indica que la búsqueda debe realizarse de forma global para encontrar todas las ocurrencias en lugar de detenerse después de encontrar la primera coincidencia.
+
+En resumen, la expresión regular `/\s+/g` busca cualquier secuencia de espacios en blanco consecutivos en el texto y se utiliza para realizar reemplazos en la función `getCharacterCountExcludingSpaces`.
+
+C. `.trim().length`: Finalmente, se aplica el método `trim` al texto para eliminar cualquier espacio en blanco al inicio o al final. Luego, se obtiene la propiedad `length` del texto resultante, que representa la cantidad de caracteres en el texto después de haber realizado los reemplazos anteriores.
+
+En resumen, esta función `getCharacterCountExcludingSpaces` retorna la cantidad de caracteres en el texto `text`, excluyendo los espacios en blanco y los caracteres no alfanuméricos.
+
 - **Recuento de números:** la aplicación cuenta cúantos números hay en el texto de entrada y muestra este recuento al usuario.
 
 ```js
