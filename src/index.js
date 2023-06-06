@@ -1,7 +1,7 @@
 import analyzer from './analyzer.js';
 
 //TODO: escuchar eventos del DOM e invocar  los métodos del objeto `analyzer`
-const userInput = document.getElementById('user-input');
+const userInput = document.getElementsByName('user-input');
 userInput.addEventListener('keyup', textAnalyzer);
 
 const resetButton = document.getElementById('reset-button');
