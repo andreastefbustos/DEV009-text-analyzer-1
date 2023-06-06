@@ -41,6 +41,10 @@ textarea[name="user-input"] {
 }
 #reset-button {
     margin-bottom: 50px;
+    padding: 10px;
+    background-color: lightseagreen;
+    color: white;
+    border: #eaeaea;
 }
 footer {
     font-size: small;
