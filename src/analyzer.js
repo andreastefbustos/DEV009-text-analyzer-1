@@ -37,7 +37,7 @@ const analyzer = {
     let cleanedText = " ";
 
     for (let i = 0; i < text.length; i++) {
-      let char = text[i];
+      const char = text[i];
 
       if (char !== " " && !isPunctuation(char)) {
         cleanedText += char;
@@ -45,7 +45,7 @@ const analyzer = {
     }
 
     //Eliminar espacios en blanco al principio y al final
-    let characterCountExcludingSpaces = cleanedText.trim().length;
+    const characterCountExcludingSpaces = cleanedText.trim().length;
 
     //Retormar la cantidad de caracteres en el texto resultante
     return characterCountExcludingSpaces;
@@ -60,9 +60,9 @@ const analyzer = {
     }
 
     const averageWordLength = sum / words.length;
-    const averageWordLengthRounded = Math.round(averageWordLength);
+    const averageWordLengthRounded = averageWordLength.toFixed(2);
 
-    return averageWordLengthRounded;
+    return parseFloat(averageWordLengthRounded);
   },
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
@@ -70,7 +70,7 @@ const analyzer = {
     let numberCount = 0;
     
     for(let i = 0; i <= text.length; i++){
-      let char = text[i];
+      const char = text[i];
 
       if(!isNaN(parseInt(char))){
         numberCount++;
@@ -85,7 +85,7 @@ const analyzer = {
     let numberSum = 0;
     
     for(let i = 0; i <= text.length; i++){
-      let char = text[i];
+      const char = text[i];
 
       if(!isNaN(parseInt(char))){
         numberSum += parseInt(char)

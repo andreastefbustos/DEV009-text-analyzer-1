@@ -239,23 +239,24 @@ getAverageWordLength: (text) => {
   }
 
   const averageWordLength = sum / words.length;
-  const averageWordLengthRounded = Math.round(averageWordLength);
+  const averageWordLengthRounded = averageWordLength.toFixed(2);
 
-  return averageWordLengthRounded;
+  return parseFloat(averageWordLengthRounded);
 }
 ```
 
 *Explicación paso a paso del código:*
 
-1. La función getAverageWordLength recibe un parámetro `text`, que es una cadena de texto.
-2. Utiliza el método `split(" ")` para dividir el texto en palabras. Esto crea un arreglo llamado `words` donde cada elemento es una palabra del texto.
-3. Se inicializa la variable `sum` en 0 para almacenar la suma de las longitudes de las palabras.
-4. Se itera sobre cada palabra en el arreglo `words` utilizando un bucle `for`. En cada iteración, se agrega la longitud de la palabra actual al valor de sum mediante `words[i].length`.
-5. Después de completar el bucle, se calcula la longitud promedio dividiendo la suma (`sum`) entre la cantidad de palabras (`words.length`).
-6. Para redondear la longitud promedio al número entero más cercano, se utiliza `Math.round(averageWordLength)`.
-7. Finalmente, se retorna la longitud promedio redondeada
+1. Se define una función `getAverageWordLength` que toma un parámetro `text`, que se espera que sea una cadena de texto.
+2. Se divide el texto en palabras utilizando el método `split(" ")`. Esto crea un array llamado words que contiene cada palabra del texto como un elemento separado.
+3. Se declara una variable `sum` e inicializa con el valor `0`. Esta variable se utilizará para sumar la longitud de todas las palabras.
+4. Se inicia un bucle `for` que recorre cada palabra en el array `words`. La variable de control del bucle `i` se inicializa en `0`, y el bucle se ejecutará mientras `i` sea menor que la longitud de `words`.
+5. Dentro del bucle, se accede a cada palabra utilizando `words[i]` y se obtiene su longitud utilizando la propiedad `length`. Luego, se suma la longitud de la palabra actual a la variable `sum`.
+6. Después de completar el bucle, se calcula la longitud promedio dividiendo la suma total (`sum`) entre la cantidad de palabras en el texto (`words.length`). El resultado se almacena en la variable `averageWordLength`.
+7. Se utiliza el método `toFixed(2)` en averageWordLength para redondear el resultado a dos decimales. La función `toFixed()` se utiliza para redondear un número decimal a una cantidad específica de decimales y devuelve una cadena de texto que representa el número redondeado. Se usa de la siguiente manera: `numero.toFixed(decimales)`. Donde `numero` es el número al que se le aplicará el redondeo y `decimales` es la cantidad de decimales a los que se desea redondear.
+8. El valor redondeado de `averageWordLength` se convierte en un número utilizando `parseFloat()` que se utiliza para convertir una cadena de texto que representa un número en un valor de tipo `float` (número de coma flotante). Convierte la cadena en un número decimal y lo devuelve.  
 
-De esta manera, la función obtiene y devuelve la longitud promedio de las palabras en el texto, redondeada al número entero más cercano.
+En resumen, la función `getAverageWordLength` divide el texto en palabras, calcula la suma de las longitudes de las palabras y luego divide esa suma entre la cantidad de palabras para obtener la longitud promedio. El resultado se redondea a dos decimales y se devuelve como número.
 
 
 
