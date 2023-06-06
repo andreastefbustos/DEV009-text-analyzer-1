@@ -45,6 +45,7 @@ textarea[name="user-input"] {
     background-color: lightseagreen;
     color: white;
     border: #eaeaea;
+    cursor: pointer;
 }
 footer {
     font-size: small;
