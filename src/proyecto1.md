@@ -157,16 +157,17 @@ La aplicación cuenta cúantos números hay en el texto de entrada y muestra est
 
 ```js
 getNumberCount: (text) => {
+  const words = text.split(" ");
   let numberCount = 0;
   
-  for(let i = 0; i <= text.length; i++){
-    let char = text[i];
+  for(let i = 0; i < words.length; i++){
+    const char = words[i];
     
-    if (!isNaN(parseInt(char))) {
-      numberCount++; 
-    }
+    if(Number(char)){
+      numberCount++;
+    } 
   }
-
+  
   return numberCount;
 }
 ```
@@ -174,26 +175,13 @@ getNumberCount: (text) => {
 *Explicación paso a paso del código:*
 
 1. La función recibe un parámetro `text` que es de tipo string y representa el texto de entrada.
-2. Se inicializa la variable `numberCount` con el valor 0. Esta variable se utilizará para contar los números encontrados.
-3. Se itera sobre cada carácter del texto utilizando un bucle `for`.
-4. Se verifica si el carácter actual es un número utilizando la función `isNaN` (is Not a Number) junto con `parseInt`. El `parseInt` convierte el carácter a un número entero. Si el resultado de `parseInt` no es un número válido, significa que el carácter no es un dígito numérico.
-5. Si el carácter es un dígito numérico, se incrementa el contador `numberCount`.
-6. Se devuelve el valor de `numberCount`, que representa el recuento de dígitos numéricos en el texto.
+2. Se divide el texto en palabras individuales utilizando el método `split` con el espacio como separador y se almacenan en el array `words`.
+3. Se inicializa la variable `numberCount` con el valor 0. Esta variable se utilizará para contar los números encontrados.
+4. se inicia un bucle `for` que recorre cada elemento en el array `words`. En cada iteración, se asigna el elemento actual a la variable `char`.
+5. Dentro del bucle, se verifica si `char` se puede convertir a un número válido utilizando la función `Number` que se utiliza para convertir un valor en su representación numérica, puede ser utilizada con diferentes tipos de datos, como cadenas de texto (strings), booleanos y otros valores.Si la conversión es exitosa, lo cual significa que `char` es un número válido, se incrementa `numberCount` en `1`. Esto significa que hemos encontrado un número en el texto.
+6. Finalmente, fuera del bucle, se devuelve el valor de `numberCount`, que representa la cantidad total de números encontrados en el texto.
 
-**Explicación sobre esta línea de código**
-```js
-let char = text[i];
-```
-
-Se está creando una variable llamada `char` y se le asigna el valor del carácter en la posición `i` del texto.
-
-* `text` es el parámetro de entrada que representa el texto que se está procesando.
-* `text[i]` accede al carácter en la posición `i` del texto. La notación de corchetes ([]) se utiliza para acceder a un carácter específico en una cadena (texto). El índice `i` representa la posición del carácter en el texto, comenzando desde 0.
-* `let char = text[i]` crea una nueva variable llamada `char` y se le asigna el valor del carácter en la posición `i` del texto.
-
-Por ejemplo, si tenemos el texto `"Hola"`, en la primera iteración del bucle (cuando `i` es igual a 0), la línea `let char = text[i]`; se traduce en `let char = "H"`. En la segunda iteración (cuando `i` es igual a 1), se traduce en `let char = "o"`, y así sucesivamente.
-
-La variable `char` se utiliza posteriormente en el código para realizar ciertas operaciones o comprobaciones con el carácter actual del texto.
+En resumen, la función `getNumberCount` divide el texto en palabras y luego itera sobre cada palabra para verificar si se puede convertir a un número. Si es así, se incrementa el contador de números `numberCount`. Al final, se devuelve el resultado de `numberCount`, que representa la cantidad total de números encontrados en el texto
 
 ## **Suma total de números:** 
 
@@ -201,14 +189,15 @@ La aplicación cuenta todos los números que hay en el texto de entrada y muestr
 
 ```js
 getNumberSum: (text) => {
+  const words = text.split(" ");
   let numberSum = 0;
-  
-  for(let i = 0; i <= text.length; i++){
-    let char = text[i];
+    
+  for(let i = 0; i < words.length; i++){
+    const char = words[i];
 
-    if(!isNaN(parseInt(char))){
-      numberSum += parseInt(char)
-    } 
+    if(Number(char)){
+      numberSum += parseFloat(char);
+    }
   }
   
   return numberSum;
@@ -218,13 +207,14 @@ getNumberSum: (text) => {
 *Explicación paso a paso del código:*
 
 1. La función `getNumberSum` recibe un parámetro `text`, que es una cadena de texto en la que queremos buscar números y calcular su suma.
-2. La variable `numberSum` se inicializa como 0 y se utilizará para almacenar la suma total de los números encontrados.
-3. Luego, se itera a través de cada carácter del texto utilizando un bucle `for`, comenzando desde `i = 0 hasta` `i <= text.length`.
-4. En cada iteración, se extrae el carácter actual del texto utilizando `text[i]` y se almacena en la variable `char`.
-5. La condición `!isNaN(parseInt(char))` verifica si el carácter es un número. `parseInt(char)` intenta convertir el carácter en un número entero. Si el carácter no puede ser convertido en un número válido, parseInt devuelve `NaN` (Not a Number). Por lo tanto, `!isNaN(parseInt(char))` devuelve true si el carácter es un número y false si no lo es.
-6. Si el carácter es un número, se suma su valor a la variable `numberSum` utilizando `numberSum += parseInt(char)`.
-7. Después de iterar a través de todos los caracteres del texto, la función devuelve el valor final de `numberSum`, que representa la suma de todos los números encontrados en el texto.
+2. En esta línea, se declara una variable llamada `words` que almacena un array de palabras obtenidas al dividir el texto en base a los espacios. La función `split(" ")` divide el texto en palabras separadas por espacios y crea un array con esas palabras.
+3. La variable `numberSum` se inicializa como 0 y se utilizará para almacenar la suma total de los números encontrados.
+4. Comienza un bucle for que recorre cada elemento en el array `words`. En cada iteración, se asigna la palabra actual a la variable `char`.
+5. Se verifica si `char` se puede convertir a un número válido utilizando la función `Number()`. Si la conversión es exitosa y `char` representa un número, se ejecuta el bloque de código dentro de este `if`.
+6. Dentro del `if`, se utiliza `parseFloat` para convertir `char` en un número decimal (punto flotante) y se suma ese valor a la variable `numberSum`. Esto permite acumular la suma de los números encontrados en el texto.
+7. Finalmente, se retorna el valor de `numberSum`, que representa la suma de todos los números encontrados en el texto.
 
+En resumen, esta función divide el texto en palabras y luego itera sobre cada palabra. Si una palabra puede ser convertida a un número válido, se suma ese número a la variable `numberSum`. Al final, se devuelve la suma total de los números encontrados en el texto.
 ## **Longitud media de las palabras:** 
 
 La aplicación calcula la longitud media de las palabras en el texto de entrada y se la muestra al usurio al usuario.

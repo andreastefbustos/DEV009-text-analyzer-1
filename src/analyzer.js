@@ -66,13 +66,15 @@ const analyzer = {
   },
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
-    
+    const words = text.split(" ");
+    // console.log(words)
     let numberCount = 0;
     
-    for(let i = 0; i <= text.length; i++){
-      const char = text[i];
+    for(let i = 0; i < words.length; i++){
+      const char = words[i];
 
-      if(!isNaN(parseInt(char))){
+      if(Number(char)){
+        // console.log(char)
         numberCount++;
       } 
     }
@@ -81,17 +83,19 @@ const analyzer = {
   },
   getNumberSum: (text) => {
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
-    
+    const words = text.split(" ");
+    // console.log(words);
     let numberSum = 0;
     
-    for(let i = 0; i <= text.length; i++){
-      const char = text[i];
+    for(let i = 0; i < words.length; i++){
+      const char = words[i];
 
-      if(!isNaN(parseInt(char))){
-        numberSum += parseInt(char)
-      } 
+      if(Number(char)){
+        // console.log(char)
+        numberSum += parseFloat(char);
+      }
     }
-
+    
     return numberSum;
   },
 };
@@ -100,7 +104,7 @@ const analyzer = {
 // console.log(analyzer.getCharacterCount("Conteo de palabras, caracteres y números June 2, 2023."));
 // console.log(analyzer.getCharacterCountExcludingSpaces("Conteo de palabras, caracteres y números June 2, 2023."));
 // console.log(analyzer.getAverageWordLength("Conteo de palabras, caracteres y números June 2, 2023."));
-// console.log(analyzer.getNumberCount("Conteo de palabras, caracteres y números June 2, 2023."));
+// console.log(analyzer.getNumberCount("Esto no es un numero 090jjuu"));
 // console.log(analyzer.getNumberSum("Conteo de palabras, caracteres y números June 2, 2023."));
 
 export default analyzer;
