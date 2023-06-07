@@ -2,25 +2,123 @@
 
 Pasos de la realición del proyecto 
 
-1. Realización del PROTOTIPO BAJA FIDELIDAD 
+1. ## Realización del PROTOTIPO BAJA FIDELIDAD 
 
 ![PROTOTIPO BAJA FIDELIDAD](/prototipo-bf-p1.png)
 
-2. HTML / Uso de HTML semántico
-* Implementación de la etiqueta `<header>` y `<h1>`. La etiqueta `<header>` en HTML se utiliza para marcar la sección de encabezado o cabecera de un documento HTML o una sección de contenido específica. Representa información introductoria o de navegación que generalmente se encuentra en la parte superior de la página. Por otra parte la etiqueta `<h1>` se utiliza para definir los títulos.
-* La etiqueta `<ul>` en HTML se utiliza para crear una lista desordenada. Una lista desordenada es un conjunto de elementos de lista que no tienen un orden específico y se presentan con viñetas o puntos. Es importante destacar que cada elemento de lista debe estar contenido dentro de un `<li>` y que la etiqueta `<ul>` solo debe contener elementos `<li>` como hijos directos.
-* Luego se utilizó la etiqueta `<textarea>` que se utiliza en HTML para crear un área de texto editable en la que los usuarios pueden ingresar y editar texto de varias líneas.
-*Implementación del uso de la etiqueta `<button>` para permitirle al usuario, mediante un clic, limpiar el contenido de la caja.
-* Implementación de la etiqueta `<footer>` que representa el pie de página de un documento o una sección de contenido.
+2. ## HTML 
 
-3. Creación de la hoja de estilos CSS, utilizando los diferentes tipos de selectores.
+* **Uso de HTML semántico**
+- Implementación de la etiqueta `<header>` y `<h1>`. La etiqueta `<header>` en HTML se utiliza para marcar la sección de encabezado o cabecera de un documento HTML o una sección de contenido específica. Representa información introductoria o de navegación que generalmente se encuentra en la parte superior de la página. Por otra parte la etiqueta `<h1>` se utiliza para definir los títulos.
+- La etiqueta `<ul>` en HTML se utiliza para crear una lista desordenada. Una lista desordenada es un conjunto de elementos de lista que no tienen un orden específico y se presentan con viñetas o puntos. Es importante destacar que cada elemento de lista debe estar contenido dentro de un `<li>` y que la etiqueta `<ul>` solo debe contener elementos `<li>` como hijos directos.
+- Luego se utilizó la etiqueta `<textarea>` que se utiliza en HTML para crear un área de texto editable en la que los usuarios pueden ingresar y editar texto de varias líneas.
+- Implementación del uso de la etiqueta `<button>` para permitirle al usuario, mediante un clic, limpiar el contenido de la caja.
+- Implementación de la etiqueta `<footer>` que representa el pie de página de un documento o una sección de contenido.
 
-4. Web APIs
-* Uso de selectores del DOM
-- querySelector
-- getElementById
+3. ## CSS
 
-4. Implementación de las funcionalidades.
+Creación de la hoja de estilos CSS, utilizando los diferentes tipos de selectores.
+
+* Uso de selectores de CSS
+* Modelo de caja (box model): El modelo de caja (box model) es un concepto fundamental en CSS que define cómo se representa visualmente un elemento en una página web. Consiste en  componentes como: padding, border y margin. Cada componente tiene un propósito específico y se utiliza para controlar la apariencia y el diseño del elemento.
+
+Un resumen de cada componente:
+
+- `Padding`: Es un espacio adicional que se coloca entre el contenido y el borde. Se utiliza para proporcionar espacio interno al elemento y separarlo del borde. Se define mediante las propiedades de padding-top, padding-right, padding-bottom y padding-left.
+- `Border`: Es una línea que rodea el contenido y el relleno del elemento. Puede tener diferentes estilos, grosores y colores. Se define mediante las propiedades de border-width, border-style y border-color.
+- `Margin`: Es el espacio que se encuentra fuera del borde, entre el elemento y los elementos adyacentes. Se utiliza para controlar el espaciado entre elementos y crear márgenes visuales entre ellos. Se define mediante las propiedades de margin-top, margin-right, margin-bottom y margin-left.
+
+En resumen, el modelo de caja y sus componentes (`padding`, `border` y `margin`) se utilizan para controlar la apariencia, el espaciado y el diseño de los elementos en una página web. Al ajustar estos componentes con propiedades CSS, se puede lograr el aspecto deseado y controlar cómo los elementos se posicionan y se relacionan entre sí en la página.
+
+4. ## Web APIs
+
+* **Uso de selectores del DOM**
+
+- querySelector: Es un método utilizado en JavaScript para seleccionar elementos HTML en función de un selector CSS. Permite obtener una referencia a un elemento específico o a un conjunto de elementos en el DOM (Documento de Objetos del Modelo).
+
+La sintaxis básica del método querySelector es la siguiente:
+
+```js
+document.querySelector(selector)
+```
+
+Donde:
+* `document` se refiere al objeto global del DOM.
+* `querySelector` es el método que se utiliza para seleccionar elementos.
+* `selector` es una cadena de texto que representa el selector CSS utilizado para identificar los elementos deseados.
+
+El método `querySelector` devuelve el primer elemento que coincide con el selector especificado. Si no se encuentra ningún elemento, devuelve null.
+
+- getElementById: Es un método utilizado en JavaScript para obtener una referencia a un elemento HTML específico en el DOM (Documento de Objetos del Modelo) utilizando su ID.
+
+La sintaxis del método getElementById es la siguiente:
+
+```js
+document.getElementById(id)
+```
+
+Donde: 
+
+* `document` se refiere al objeto global del DOM.
+* `getElementById` es el método utilizado para buscar un elemento por su ID.
+* `id` es una cadena de texto que representa el ID del elemento que deseas obtener.
+
+El método getElementById devuelve el elemento HTML que tiene el ID especificado. Si no se encuentra ningún elemento con ese ID, devuelve null.
+
+El método getElementById es útil cuando se necesita acceder a un elemento específico del DOM y se conoce su ID. Es una forma rápida y sencilla de obtener una referencia directa a ese elemento en JavaScript.
+
+* **Manejo de eventos del DOM (listeners, propagación, delegación)**
+
+Un event listener (escuchador de eventos) es una función que se utiliza en JavaScript para "escuchar" o "observar" eventos que ocurren en un elemento HTML o en el documento en general. Permite ejecutar código en respuesta a un evento específico, como un clic del mouse, una pulsación de tecla, el cambio de valor de un campo de entrada, entre otros.
+
+Los event listeners se agregan a los elementos HTML para que puedan responder a interacciones del usuario o a cambios en el estado de la página. Cuando ocurre el evento especificado, se ejecuta la función de event listener asociada.
+
+La sintaxis básica para agregar un event listener a un elemento HTML es la siguiente:
+
+```js
+elemento.addEventListener(evento, función)
+```
+
+Donde:
+
+* `elemento` es el elemento HTML al que deseas agregar el event listener.
+* `evento` es una cadena de texto que representa el tipo de evento que deseas escuchar, como "click", "keydown", "change", etc. En este proyecto se utilizo "click" y "keyup"
+* `función` es la función que se ejecutará cuando ocurra el evento. Puede ser una función existente o una función anónima.
+
+`función anónima`: No tiene un nombre específico asociado. En lugar de ser definida con un nombre identificador, se declara directamente como una expresión de función. Aunque no tiene un nombre, puede ser asignada a una variable o utilizada como argumento de otra función.
+
+`función existente` : Definida previamente con un nombre específico y se puede invocar utilizando ese nombre.
+
+* **Manipulación dinámica del DOM**
+
+- `textContent` y `innerHTML`: Son propiedades que se utilizan en JavaScript para acceder al contenido textual de un elemento HTML y para establecer o modificar dicho contenido.
+
+Algunas de sus diferencias son: 
+
+1. Contenido manipulado:
+- `textContent` obtiene o establece el contenido textual de un elemento, sin procesar las etiquetas HTML presentes en él.
+- `innerHTML` obtiene o establece el contenido HTML interno de un elemento, incluyendo las etiquetas HTML y el texto que pueda haber dentro de él.
+
+2. Tratamiento de etiquetas HTML:
+- `textContent` considera las etiquetas HTML como texto plano y las muestra tal como están, sin interpretarlas como elementos HTML.
+- `innerHTML` interpreta y renderiza las etiquetas HTML presentes en el contenido y las trata como elementos HTML
+
+3. Seguridad:
+- `textContent` es más seguro en términos de seguridad, ya que garantiza que cualquier contenido ingresado se trate como texto y no como código ejecutable. Esto ayuda a prevenir ataques de scripts maliciosos (XSS).
+- `innerHTML` puede ser menos seguro, ya que si se establece contenido HTML sin una sanitización y validación adecuadas, se corre el riesgo de permitir la ejecución de código malicioso.
+
+4. Estructura del DOM:
+- `textContent` no afecta la estructura del DOM, ya que solo trata el contenido como texto sin interpretar las etiquetas HTML.
+- `innerHTML` puede afectar la estructura del DOM, ya que puede agregar, modificar o eliminar elementos HTML dentro del elemento objetivo.
+
+5. Rendimiento:
+- `textContent` generalmente tiene un rendimiento mejor que `innerHTML`, ya que no implica el procesamiento y renderizado de las etiquetas HTML presentes en el contenido.
+
+En resumen, `textContent` es más adecuado cuando se necesita acceder o establecer el contenido textual simple de un elemento, mientras que `innerHTML` es más adecuado cuando se desea manipular el contenido HTML, incluyendo etiquetas y texto dentro del elemento. Sin embargo, se debe tener cuidado al utilizar `innerHTML` para evitar problemas de seguridad.
+
+5. ## JavaScript
+
+Implementación de las funcionalidades.
 
 ## **Recuento de palabras:** 
 
@@ -60,7 +158,7 @@ getCharacterCount: (text) => {
 
 ## **Recuento de caracteres excluyendo espacios y signos de puntuación:** 
 
-La aplicación debe cuenta el número de caracteres en el texto de entrada, excluyendo espacios y signos de puntuación, y muestra este recuento al usuario.
+La aplicación cuenta el número de caracteres en el texto de entrada, excluyendo espacios y signos de puntuación, y muestra este recuento al usuario.
 
 ```js
 getCharacterCountExcludingSpaces: (text) => {
@@ -72,7 +170,7 @@ getCharacterCountExcludingSpaces: (text) => {
 
 *Explicación paso a paso del código:*
 
-A. `text.replace(/[^\w\s]|_/g, "")`: Esta línea utiliza el método replace en el texto text para reemplazar ciertos caracteres. La expresión regular `/[^\w\s]|_/g` busca caracteres que no son alfanuméricos (`[^\w\s]`) o el guion bajo (`_`). La `g` al final indica que se deben buscar todas las ocurrencias. Estos caracteres encontrados son reemplazados por una cadena vacía, es decir, se eliminan del texto.
+A. `text.replace(/[^\w\s]|_/g, "")`: Esta línea utiliza el método replace en el texto `text` para reemplazar ciertos caracteres. La expresión regular `/[^\w\s]|_/g` busca caracteres que no son alfanuméricos (`[^\w\s]`) o el guion bajo (`_`). La `g` al final indica que se deben buscar todas las ocurrencias. Estos caracteres encontrados son reemplazados por una cadena vacía, es decir, se eliminan del texto.
 
 ***Explicación paso a paso de la expresión regular `/[^\w\s]|_/g`***
 
@@ -181,8 +279,8 @@ getNumberCount: (text) => {
 1. La función recibe un parámetro `text` que es de tipo string y representa el texto de entrada.
 2. Se divide el texto en palabras individuales utilizando el método `split` con el espacio como separador y se almacenan en el array `words`.
 3. Se inicializa la variable `numberCount` con el valor 0. Esta variable se utilizará para contar los números encontrados.
-4. se inicia un bucle `for` que recorre cada elemento en el array `words`. En cada iteración, se asigna el elemento actual a la variable `char`.
-5. Dentro del bucle, se verifica si `char` se puede convertir a un número válido utilizando la función `Number` que se utiliza para convertir un valor en su representación numérica, puede ser utilizada con diferentes tipos de datos, como cadenas de texto (strings), booleanos y otros valores.Si la conversión es exitosa, lo cual significa que `char` es un número válido, se incrementa `numberCount` en `1`. Esto significa que hemos encontrado un número en el texto.
+4. Se inicia un bucle `for` que recorre cada elemento en el array `words`. En cada iteración, se asigna el elemento actual a la variable `char`.
+5. Dentro del bucle, se verifica si `char` se puede convertir a un número válido utilizando la función `Number` que se utiliza para convertir un valor en su representación numérica, puede ser utilizada con diferentes tipos de datos, como cadenas de texto (strings), booleanos y otros valores. Si la conversión es exitosa, lo cual significa que `char` es un número válido, se incrementa `numberCount` en `1`. Esto significa que hemos encontrado un número en el texto.
 6. Finalmente, fuera del bucle, se devuelve el valor de `numberCount`, que representa la cantidad total de números encontrados en el texto.
 
 En resumen, la función `getNumberCount` divide el texto en palabras y luego itera sobre cada palabra para verificar si se puede convertir a un número. Si es así, se incrementa el contador de números `numberCount`. Al final, se devuelve el resultado de `numberCount`, que representa la cantidad total de números encontrados en el texto
@@ -213,7 +311,7 @@ getNumberSum: (text) => {
 1. La función `getNumberSum` recibe un parámetro `text`, que es una cadena de texto en la que queremos buscar números y calcular su suma.
 2. En esta línea, se declara una variable llamada `words` que almacena un array de palabras obtenidas al dividir el texto en base a los espacios. La función `split(" ")` divide el texto en palabras separadas por espacios y crea un array con esas palabras.
 3. La variable `numberSum` se inicializa como 0 y se utilizará para almacenar la suma total de los números encontrados.
-4. Comienza un bucle for que recorre cada elemento en el array `words`. En cada iteración, se asigna la palabra actual a la variable `char`.
+4. Comienza un bucle `for` que recorre cada elemento en el array `words`. En cada iteración, se asigna la palabra actual a la variable `char`.
 5. Se verifica si `char` se puede convertir a un número válido utilizando la función `Number()`. Si la conversión es exitosa y `char` representa un número, se ejecuta el bloque de código dentro de este `if`.
 6. Dentro del `if`, se utiliza `parseFloat` para convertir `char` en un número decimal (punto flotante) y se suma ese valor a la variable `numberSum`. Esto permite acumular la suma de los números encontrados en el texto.
 7. Finalmente, se retorna el valor de `numberSum`, que representa la suma de todos los números encontrados en el texto.
