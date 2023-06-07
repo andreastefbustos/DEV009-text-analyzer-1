@@ -6,17 +6,21 @@ Pasos de la realición del proyecto
 
 ![PROTOTIPO BAJA FIDELIDAD](/prototipo-bf-p1.png)
 
-2. Implementación de la etiqueta `<header>` y `<h1>`. La etiqueta `<header>` en HTML se utiliza para marcar la sección de encabezado o cabecera de un documento HTML o una sección de contenido específica. Representa información introductoria o de navegación que generalmente se encuentra en la parte superior de la página. Por otra parte la etiqueta `<h1>` se utiliza para definir los títulos.
+2. HTML / Uso de HTML semántico
+* Implementación de la etiqueta `<header>` y `<h1>`. La etiqueta `<header>` en HTML se utiliza para marcar la sección de encabezado o cabecera de un documento HTML o una sección de contenido específica. Representa información introductoria o de navegación que generalmente se encuentra en la parte superior de la página. Por otra parte la etiqueta `<h1>` se utiliza para definir los títulos.
+* La etiqueta `<ul>` en HTML se utiliza para crear una lista desordenada. Una lista desordenada es un conjunto de elementos de lista que no tienen un orden específico y se presentan con viñetas o puntos. Es importante destacar que cada elemento de lista debe estar contenido dentro de un `<li>` y que la etiqueta `<ul>` solo debe contener elementos `<li>` como hijos directos.
+* Luego se utilizó la etiqueta `<textarea>` que se utiliza en HTML para crear un área de texto editable en la que los usuarios pueden ingresar y editar texto de varias líneas.
+*Implementación del uso de la etiqueta `<button>` para permitirle al usuario, mediante un clic, limpiar el contenido de la caja.
+* Implementación de la etiqueta `<footer>` que representa el pie de página de un documento o una sección de contenido.
 
-3. La etiqueta `<ul>` en HTML se utiliza para crear una lista desordenada. Una lista desordenada es un conjunto de elementos de lista que no tienen un orden específico y se presentan con viñetas o puntos. Es importante destacar que cada elemento de lista debe estar contenido dentro de un `<li>` y que la etiqueta `<ul>` solo debe contener elementos `<li>` como hijos directos.
+3. Creación de la hoja de estilos CSS, utilizando los diferentes tipos de selectores.
 
-4. Luego se utilizó la etiqueta `<textarea>` que se utiliza en HTML para crear un área de texto editable en la que los usuarios pueden ingresar y editar texto de varias líneas.
+4. Web APIs
+* Uso de selectores del DOM
+- querySelector
+- getElementById
 
-5. Implementación del uso de la etiqueta `<button>` para permitirle al usuario, mediante un clic, limpiar el contenido de la caja. 
-
-6. Implementación de la etiqueta `<footer>` que representa el pie de página de un documento o una sección de contenido.
-
-7. Implementación de las funcionalidades.
+4. Implementación de las funcionalidades.
 
 ## **Recuento de palabras:** 
 
@@ -247,6 +251,9 @@ getAverageWordLength: (text) => {
 8. El valor redondeado de `averageWordLength` se convierte en un número utilizando `parseFloat()` que se utiliza para convertir una cadena de texto que representa un número en un valor de tipo `float` (número de coma flotante). Convierte la cadena en un número decimal y lo devuelve.  
 
 En resumen, la función `getAverageWordLength` divide el texto en palabras, calcula la suma de las longitudes de las palabras y luego divide esa suma entre la cantidad de palabras para obtener la longitud promedio. El resultado se redondea a dos decimales y se devuelve como número.
+
+
+
 
 
 
