@@ -18,9 +18,9 @@ function textAnalyzer(){
   document.querySelector('#word-count').innerHTML = wordCount;
   document.querySelector('#charater-count').innerHTML = charaterCount;
   document.querySelector('#character-count-excluding-spaces').innerHTML = characterCountExcludingSpaces;
-  document.querySelector('#average-word-length').innerHTML = averageWordLength;
   document.querySelector('#number-count').innerHTML = numberCount;
   document.querySelector('#number-sum').innerHTML = numberSum;
+  document.querySelector('#average-word-length').innerHTML = averageWordLength;
 }
 
 function reset(){
