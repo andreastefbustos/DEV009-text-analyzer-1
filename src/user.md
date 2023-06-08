@@ -28,4 +28,7 @@ La aplicación cuenta con las siguientes funcionalidades:
 - CSS
 - JavaScript
 
+## Realización del PROTOTIPO BAJA FIDELIDAD 
+
+![PROTOTIPO BAJA FIDELIDAD](/prototipo-bf-p1.png)
 
