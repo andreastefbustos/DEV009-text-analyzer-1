@@ -24,7 +24,7 @@ function textAnalyzer(){
 }
 
 function reset(){
-  document.querySelector('textarea[name = "user-input"]').value = " ";
+  document.querySelector('textarea[name = "user-input"]').value = "";
   document.querySelector('#word-count').innerHTML = "0";
   document.querySelector('#charater-count').innerHTML = "0";
   document.querySelector('#character-count-excluding-spaces').innerHTML = "0";
