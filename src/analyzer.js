@@ -1,10 +1,10 @@
 const analyzer = {  
   getWordCount: (text) => {
     // TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
-    if (text.trim() === "") {
+    if (text.trim() === "" || /^[,.:;«»[\]{}()¿?¡!\-"']+$/g.test(text)) {
       return 0;
     }
-    
+        
     const words = text.split(" ");
     const wordCount = words.length;
     
@@ -12,7 +12,7 @@ const analyzer = {
   },
   getCharacterCount: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
-    if (text.trim() === "") {
+    if (text === "") {
       return 0;
     }
     
@@ -29,7 +29,7 @@ const analyzer = {
     // 2. Otra forma de realizarlo, declarando una variable con todos los signos de puntación, y realizando un for
 
     //Definir los signos de puntación que se desean excluir.
-    const punctuation = [",", ".", "!", "?", ";", ":", "-", "'", '"', "{", "}", "+", "=", "<", ">", "$", "#", "@", "%", "^", "*", "(", ")", "_", "|", "~", "`", "&", "[", "]", "/"];
+    const punctuation = [",", ".", "!", "?", ";", ":", "-", "'", '"', "{", "}", "+", "=", "<", ">", "$", "#", "@", "%", "^", "*", "(", ")", "_", "|", "~", "`", "&", "[", "]", "/", "«", "»", "¿", "¡"];
 
     //funcion para  verificar si un carácter es un signo de puntación 
     function isPunctuation(char) {
@@ -61,6 +61,12 @@ const analyzer = {
   },
   getAverageWordLength: (text) => {    
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
+    const punctuation = /^[,.:;«»[\]{}()¿?¡!\-"']+$/g;
+    
+    if (punctuation.test(text)) {
+      return 0;
+    }
+    
     const words = text.split(" ");
     let sum = 0;
 
