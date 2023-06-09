@@ -1,12 +1,86 @@
 # PROYECTO 1 - TEXT ANALYZER
 
-Pasos de la realición del proyecto 
+El Text Analyzer es una aplicación web que te permite analizar y obtener métricas de un texto ingresado por ti.
 
-1. ## Realización del PROTOTIPO BAJA FIDELIDAD 
+## Funcionalidades
+
+La aplicación cuenta con las siguientes funcionalidades:
+
+- **Recuento de palabras**: Muestra el número total de palabras en el texto que ingreses.
+- **Recuento de caracteres**: Te indica la cantidad de caracteres presentes en el texto, incluyendo espacios y signos de puntuación.
+- **Recuento de caracteres sin espacios y signos de puntuación**: Muestra el número de caracteres en el texto, excluyendo los espacios y signos de puntuación.
+- **Longitud promedio de palabras**: Calcula y te muestra la longitud promedio de las palabras en el texto.
+- **Recuento de números**: Cuenta y te informa cuántos números hay en el texto ingresado.
+- **Suma total de números**: Si hay números en el texto, realiza la suma de todos ellos y muestra el resultado.
+
+## Cómo usar la aplicación 
+
+1. Accede a la aplicación [aquí](https://andreastefbustos.github.io/DEV009-text-analyzer-1/)
+2. En el cuadro de texto, escribe el texto que deseas analizar.
+3. A medida que vayas escribiendo, verás cómo se actualizan las métricas en tiempo real.
+4. Puedes experimentar con diferentes textos y observar los resultados obtenidos.
+5. Si deseas borrar el contenido del cuadro de texto, simplemente haz clic en el botón "Limpiar métricas".
+
+## Información adicional
+
+* Este proyecto se ha desarrollado utilizando tecnologías como: 
+- HTML
+- CSS
+- JavaScript
+
+## Realización del PROTOTIPO 
+
+BAJA FIDELIDAD
 
 ![PROTOTIPO BAJA FIDELIDAD](/prototipo-bf-p1.png)
 
-2. ## HTML 
+PALETA DE COLORES
+
+![PROTOTIPO PALETA DE COLORES](/prototipo-paletaDeColores.png)
+
+FINAL PROYECTO TEXT ANALYZER
+
+![TEXT ANALYZER](/proyectoTextAnalyzer.png)
+
+## Paletas de Colores
+
+- **Fondo**: Se ha utilizado el color "seashell" como color de fondo del cuerpo para crear un ambiente tranquilo y agradable, lo que ayuda a los usuarios a concentrarse en el contenido del texto que están analizando.
+
+- **Elementos resaltados**: Los elementos de la clase "characters" se muestran en un tono de gris claro (#eaeaea), lo que les permite destacar de manera sutil y brinda una sensación de elegancia al diseño general.
+
+- **Destacar información clave**: Se utilizado el color "coral" para resaltar ciertas partes del texto que son especialmente relevantes o importantes. Esto ayuda a los usuarios a identificar rápidamente la información clave en los resultados del análisis.
+
+La combinación de estos colores en esta paleta busca lograr una estética visual coherente y agradable, mejorando así la experiencia de los usuarios al interactuar con el Text Analyzer.
+
+Se que esta elección de colores contribuya a crear una experiencia de usuario agradable y eficiente, donde los usuarios puedan realizar análisis de texto de manera intuitiva y sin distracciones visuales.
+
+## Organización del Proyecto
+
+### Estructura del proyecto
+
+Se crea una carpeta `src` donde se le asignaron los archivos `index.html`, `styles.css`, `analyzer.js`, `index.js` y proyecto1.md.
+
+- `index.html`: Archivo principal que contiene la estructura HTML de la página.
+- `styles.css`: Archivo CSS que define los estilos visuales del proyecto.
+- `analyzer.js`: Archivo JavaScript que contiene la lógica y funcionalidad del Text Analyzer.
+- `index.js`: Archivo JavaScript donde se escucha los eventos del DOM, invocaciones de los métodos del objeto analyzer y actualizaciones del resultado en la UI (interfaz de usuario).
+- `proyecto1.md`: Documento actual que proporciona información sobre el proyecto.
+
+## Flujo de trabajo
+
+1. Realicé una planificación inicial para definir los requisitos y funcionalidades del Text Analyzer.
+2. Diseñé la interfaz gráfica utilizando HTML y CSS, siguiendo los principios de diseño responsivo.
+3. Implementé la funcionalidad del Text Analyzer utilizando JavaScript, dividiendo el código en módulos para facilitar el mantenimiento.
+4. Realicé pruebas exhaustivas para asegurarme de que el Text Analyzer funcione correctamente y cumpla con los requisitos establecidos.
+5. Realicé mejoras adicionales en el diseño y la funcionalidad según las retroalimentaciones recibidas.
+
+## Control de versiones
+
+He utilizado Git como sistema de control de versiones para mantener un registro detallado de los cambios realizados en el proyecto.
+
+# Pasos de la realición del proyecto explicando sus funcionalidades. 
+
+1. ## HTML 
 
 * **Uso de HTML semántico**
 - Implementación de la etiqueta `<header>` y `<h1>`. La etiqueta `<header>` en HTML se utiliza para marcar la sección de encabezado o cabecera de un documento HTML o una sección de contenido específica. Representa información introductoria o de navegación que generalmente se encuentra en la parte superior de la página. Por otra parte la etiqueta `<h1>` se utiliza para definir los títulos.
@@ -15,7 +89,7 @@ Pasos de la realición del proyecto
 - Implementación del uso de la etiqueta `<button>` para permitirle al usuario, mediante un clic, limpiar el contenido de la caja.
 - Implementación de la etiqueta `<footer>` que representa el pie de página de un documento o una sección de contenido.
 
-3. ## CSS
+2. ## CSS
 
 Creación de la hoja de estilos CSS, utilizando los diferentes tipos de selectores.
 
@@ -30,7 +104,7 @@ Un resumen de cada componente:
 
 En resumen, el modelo de caja y sus componentes (`padding`, `border` y `margin`) se utilizan para controlar la apariencia, el espaciado y el diseño de los elementos en una página web. Al ajustar estos componentes con propiedades CSS, se puede lograr el aspecto deseado y controlar cómo los elementos se posicionan y se relacionan entre sí en la página.
 
-4. ## Web APIs
+3. ## Web APIs
 
 * **Uso de selectores del DOM**
 
@@ -116,7 +190,7 @@ Algunas de sus diferencias son:
 
 En resumen, `textContent` es más adecuado cuando se necesita acceder o establecer el contenido textual simple de un elemento, mientras que `innerHTML` es más adecuado cuando se desea manipular el contenido HTML, incluyendo etiquetas y texto dentro del elemento. Sin embargo, se debe tener cuidado al utilizar `innerHTML` para evitar problemas de seguridad.
 
-5. ## JavaScript
+4. ## JavaScript
 
 Implementación de las funcionalidades.
 
@@ -350,39 +424,137 @@ getAverageWordLength: (text) => {
 
 En resumen, la función `getAverageWordLength` divide el texto en palabras, calcula la suma de las longitudes de las palabras y luego divide esa suma entre la cantidad de palabras para obtener la longitud promedio. El resultado se redondea a dos decimales y se devuelve como número.
 
-# Text Analyzer
+5. ## Funcionalidades opcionales.
 
-El Text Analyzer es una aplicación web que te permite analizar y obtener métricas de un texto ingresado por ti.
+Se realizó algunas funciones opciones, como: 
 
-## Funcionalidades
+* El recuento de palabras y caracteres sea 0 para una entrada de texto vacía.
+* El recuento de palabras y caracteres sea 0 para una entrada de texto con solo espacios.
+* El recuento de palabras y caracteres sea 0 para una entrada de texto con solo caracteres de puntuación.
+* El recuento de promedio longitud sea 0 para una entrada de texto con solo caracteres de puntuación.
 
-La aplicación cuenta con las siguientes funcionalidades:
+Por lo tanto se hicieron algunas modificaciones en las funciones: 
 
-- **Recuento de palabras**: Muestra el número total de palabras en el texto que ingreses.
-- **Recuento de caracteres**: Te indica la cantidad de caracteres presentes en el texto, incluyendo espacios y signos de puntuación.
-- **Recuento de caracteres sin espacios y signos de puntuación**: Muestra el número de caracteres en el texto, excluyendo los espacios y signos de puntuación.
-- **Longitud promedio de palabras**: Calcula y te muestra la longitud promedio de las palabras en el texto.
-- **Recuento de números**: Cuenta y te informa cuántos números hay en el texto ingresado.
-- **Suma total de números**: Si hay números en el texto, realiza la suma de todos ellos y muestra el resultado.
+- `getWordCount(text)`
+- `getCharacterCount(text)`
+- `getAverageWordLength(text)`
 
-## Cómo usar la aplicación 
+## **Recuento de caracteres:**
 
-1. Accede a la aplicación [aquí](https://andreastefbustos.github.io/DEV009-text-analyzer-1/)
-2. En el cuadro de texto, escribe el texto que deseas analizar.
-3. A medida que vayas escribiendo, verás cómo se actualizan las métricas en tiempo real.
-4. Puedes experimentar con diferentes textos y observar los resultados obtenidos.
-5. Si deseas borrar el contenido del cuadro de texto, simplemente haz clic en el botón "Limpiar métricas".
+```js
+getWordCount: (text) => {
+  
+  if (text.trim() === "" || /^[,.:;«»[\]{}()¿?¡!\-"']+$/g.test(text)) {
+    return 0;
+  }
+        
+  const words = text.split(" ");
+  const wordCount = words.length;
+    
+  return wordCount;
+}
+```
 
-## Información adicional
+*Explicación paso a paso del código:*
 
-* Este proyecto se ha desarrollado utilizando tecnologías como: 
-- HTML
-- CSS
-- JavaScript
+1. `getWordCount: (text) => {`: Esta línea define una función llamada getWordCount que toma un parámetro text. La función calculará el número de palabras en el texto.
 
-## Realización del PROTOTIPO BAJA FIDELIDAD 
+2. `if (text.trim() === "" || /^[,.:;«»[\]{}()¿?¡!\-"']+$/g.test(text)) {`: Esta línea verifica si el texto está vacío o si contiene solo caracteres de puntuación. Utiliza una expresión regular `(/^[,.:;«»[\]{}()¿?¡!\-"']+$/g)` para realizar la prueba. Si el texto cumple alguna de estas condiciones, la función devuelve 0, lo que indica que no hay palabras en el texto.
 
-![PROTOTIPO BAJA FIDELIDAD](/prototipo-bf-p1.png)
+3. `const words = text.split(" ");`: Esta línea divide el texto en palabras individuales utilizando el método `split(" ")`, que divide el texto en cada espacio en blanco y devuelve un arreglo de palabras.
+
+4. `const wordCount = words.length;`: Esta línea asigna la longitud del arreglo words a la variable wordCount. Esto representa el número total de palabras en el texto.
+
+5. `return wordCount;`: Finalmente, la función devuelve el valor de `wordCount`, que es el número de palabras en el texto.
+
+En resumen, esta función `getWordCount` calcula el número de palabras en un texto dado. Comienza verificando si el texto está vacío o contiene solo caracteres de puntuación. Si es así, devuelve 0. De lo contrario, divide el texto en palabras y devuelve la cantidad total de palabras.
+
+## **Recuento de caracteres:**
+
+```js
+getCharacterCount: (text) => {
+  
+  if (text === "") {
+    return 0;
+  }
+  
+  const charaterCount = text.length;
+  return charaterCount;
+}
+```
+
+*Explicación paso a paso del código:*
+
+1. `getCharacterCount: (text) => {`: Esta línea define una función llamada `getCharacterCount` que toma un parámetro `text`. La función calculará el número de caracteres en el texto.
+
+2. `if (text === "") {`: Esta línea verifica si el texto está vacío. Si es así, significa que no hay caracteres en el texto y la función devuelve 0.
+
+3. `return 0;`: Si el texto está vacío, la función termina aquí y devuelve 0, indicando que no hay caracteres en el texto.
+
+4. `const charaterCount = text.length;`: Si el texto no está vacío, esta línea asigna la longitud del texto a la variable `charaterCount`. Esto representa el número total de caracteres en el texto, incluyendo espacios en blanco y caracteres especiales.
+
+5. `return charaterCount;`: Finalmente, la función devuelve el valor de `charaterCount`, que es el número de caracteres en el texto.
+
+En resumen, esta función `getCharacterCount` calcula el número de caracteres en un texto dado. Verifica si el texto está vacío y devuelve 0 en ese caso. Si el texto no está vacío, simplemente devuelve la longitud del texto, que representa el número total de caracteres.
+
+## **Longitud media de las palabras:**
+
+```js
+getAverageWordLength: (text) => {    
+  const punctuation = /^[,.:;«»[\]{}()¿?¡!\-"']+$/g;
+    
+  if (punctuation.test(text)) {
+    return 0;
+  }
+    
+  const words = text.split(" ");
+  let sum = 0;
+
+  for (let i = 0; i < words.length; i++) {
+    sum += words[i].length;
+  }
+
+  const averageWordLength = sum / words.length;
+  const averageWordLengthRounded = averageWordLength.toFixed(2);
+
+  return parseFloat(averageWordLengthRounded);
+}
+```
+
+1. `getAverageWordLength: (text) => {`: Se define una función llamada `getAverageWordLength` que toma un parámetro text. La función calculará la longitud promedio de las palabras en el texto.
+
+2. `const punctuation = /^[,.:;«»[\]{}()¿?¡!\-"']+$/g;`: Se crea una expresión regular llamada punctuation que busca caracteres de puntuación en el texto. Esta expresión regular se utilizará más adelante para verificar si el texto contiene solo caracteres de puntuación.
+
+3. `if (punctuation.test(text)) {`: Se utiliza el método `test()` de la expresión regular para verificar si el texto contiene solo caracteres de puntuación. Si es así, la función devuelve 0, ya que no hay palabras para calcular una longitud promedio.
+
+4. `const words = text.split(" ");`: Se divide el texto en palabras individuales utilizando el método `split(" ")`, que divide el texto en cada espacio en blanco y devuelve un arreglo de palabras.
+
+5. `let sum = 0;`: Se inicializa una variable sum que se utilizará para almacenar la suma de las longitudes de todas las palabras.
+
+6. `for (let i = 0; i < words.length; i++) {`: Este bucle for itera a través de todas las palabras en el arreglo words.
+
+7. `sum += words[i].length;`: Dentro del bucle, se agrega la longitud de cada palabra al valor de `sum`.
+
+8. `const averageWordLength = sum / words.length;`: Después de completar el bucle, se calcula la longitud promedio dividiendo la suma de las longitudes de las palabras entre la cantidad de palabras.
+
+9. `const averageWordLengthRounded = averageWordLength.toFixed(2);`: Esta línea redondea la longitud promedio a 2 decimales utilizando el método `toFixed(2)` y la asigna a la variable `averageWordLengthRounded`.
+
+10. `return parseFloat(averageWordLengthRounded);`: Finalmente, la función devuelve el valor de `averageWordLengthRounded` como un número de punto `flotante (float)`.
+
+En resumen, esta función `getAverageWordLength` calcula la longitud promedio de las palabras en un texto dado. Verifica si el texto contiene solo caracteres de puntuación y devuelve 0 si es así. Luego, divide el texto en palabras, suma sus longitudes y calcula la longitud promedio. El resultado se redondea a 2 decimales y se devuelve como un número de punto flotante.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
