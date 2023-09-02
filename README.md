@@ -1,729 +1,568 @@
-# Analizador de texto
+# PROYECTO 1 - TEXT ANALYZER
 
-## Índice
+El Text Analyzer es una aplicación web que te permite analizar y obtener métricas de un texto ingresado por ti.
 
-* [1. Consideraciones generales](#1-consideraciones-generales)
-* [2. Preámbulo](#2-preámbulo)
-* [3. Funcionalidades](#3-funcionalidades)
-* [4. Boilerplate](#4-boilerplate)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Pruebas](#6-pruebas)
-* [7. Pistas, tips y lecturas complementarias](#7-pistas-tips-y-lecturas-complementarias)
-* [8. Consideraciones para pedir tu Project Feedback](#8-consideraciones-para-pedir-tu-project-feedback)
-* [9. Objetivos de aprendizaje](#9-objetivos-de-aprendizaje)
-* [10. Funcionalidades opcionales](#10-funcionalidades-opcionales)
+## Funcionalidades
 
-***
+La aplicación cuenta con las siguientes funcionalidades:
 
-## 1. Consideraciones generales
+- **Recuento de palabras**: Muestra el número total de palabras en el texto que ingreses.
+- **Recuento de caracteres**: Te indica la cantidad de caracteres presentes en el texto, incluyendo espacios y signos de puntuación.
+- **Recuento de caracteres sin espacios y signos de puntuación**: Muestra el número de caracteres en el texto, excluyendo los espacios y signos de puntuación.
+- **Longitud promedio de palabras**: Calcula y te muestra la longitud promedio de las palabras en el texto.
+- **Recuento de números**: Cuenta y te informa cuántos números hay en el texto ingresado.
+- **Suma total de números**: Si hay números en el texto, realiza la suma de todos ellos y muestra el resultado.
 
-* Este proyecto lo resolvemos de manera **individual**.
-* El rango de tiempo estimado para completar el proyecto es de 1 a 3 Sprints.
-* Enfócate en aprender y no solamente en "completar" el proyecto.
-* Te sugerimos que no intentes saberlo todo antes de empezar a codear.
-  No te preocupes demasiado ahora por lo que _todavía_ no entiendas.
-  Irás aprendiendo.
+## Cómo usar la aplicación 
 
-## 2. Preámbulo
+1. Accede a la aplicación [aquí](https://andreastefbustos.github.io/DEV009-text-analyzer-1/)
+2. En el cuadro de texto, escribe el texto que deseas analizar.
+3. A medida que vayas escribiendo, verás cómo se actualizan las métricas en tiempo real.
+4. Puedes experimentar con diferentes textos y observar los resultados obtenidos.
+5. Si deseas borrar el contenido del cuadro de texto, simplemente haz clic en el botón "Limpiar métricas".
 
-![Una lupa sobre texto de libro](https://github.com/Laboratoria/bootcamp/assets/92090/2b45f653-69a5-4282-a65c-d34125c36113)
+## Información adicional
 
-_Credito: Foto de [ethan](https://unsplash.com/fr/@andallthings?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)_
-_en [Unsplash](https://unsplash.com/es/fotos/72NpWZJOskU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)_
+* Este proyecto se ha desarrollado utilizando tecnologías como: 
+- HTML
+- CSS
+- JavaScript
 
-Un analizador de texto es una aplicación para extraer información útil de un
-texto utilizando diversas técnicas, como el procesamiento del lenguaje
-natural (NLP), el aprendizaje automático (ML) y el análisis estadístico.
-Estas aplicaciones pueden proporcionar una variedad de métricas que brindan
-información básica sobre la longitud y la estructura del texto como por
-ejemplo, el conteo de palabras, el conteo de caracteres, el conteo de
-oraciones y el conteo de párrafos. Otras métricas incluyen el análisis
-de sentimientos, que utiliza técnicas de NLP para determinar el tono
-general positivo, negativo o neutral del texto, y el análisis de
-legibilidad, que utiliza algoritmos para evaluar la complejidad y la
-legibilidad del texto.
+## Realización del PROTOTIPO 
 
-En general, las aplicaciones de análisis de texto brindan información
-valiosa y métricas sobre los textos que pueden ayudar a los usuarios a
-tomar decisiones informadas y sacar conclusiones significativas.
-Mediante el uso de estas herramientas de análisis, los usuarios pueden
-obtener una comprensión más profunda de los textos.
+BAJA FIDELIDAD
 
-## 3. Funcionalidades
+![PROTOTIPO BAJA FIDELIDAD](/prototipo-bf-p1.png)
 
-En este proyecto implementarás un analizador de texto web para calcular
-y mostrar métricas de un texto enviado por el usuario.
+PALETA DE COLORES
 
-El listado de funcionalidades es el siguiente:
+![PROTOTIPO PALETA DE COLORES](/prototipo-paletaDeColores.png)
 
-1. La aplicación debe permitir al usuario ingresar un texto escribiéndolo
-en un cuadro de texto.
+FINAL PROYECTO TEXT ANALYZER
 
-2. La aplicación debe calcular las siguientes métricas y actualizar el
-resultado en tiempo real a medida que el usuario escribe su texto:
+![TEXT ANALYZER](/proyectoTextAnalyzer.png)
 
-    - **Recuento de palabras**: la aplicación debe poder contar el número de
-    palabras en el texto de entrada y mostrar este recuento al usuario
-    - **Recuento de caracteres**: la aplicación debe poder contar el número de
-    caracteres en el texto de entrada, incluidos espacios y signos de
-    puntuación, y mostrar este recuento al usuario.
-    - **Recuento de caracteres excluyendo espacios y signos de puntuación**:
-    la aplicación debe poder contar el número de caracteres en el texto de
-    entrada, excluyendo espacios y signos de puntuación, y mostrar este recuento
-    al usuario.  
-    - **Recuento de números**: la aplicación debe contar cúantos números hay en
-    el texto de entrada y mostrar este recuento al usuario.
-    - **Suma total de números**: la aplicación debe sumar todos los números que
-    hay en el texto de entrada y mostrar el resultado al usuario.
-    - **Longitud media de las palabras**: la aplicación debe calcular la
-    longitud media de las palabras en el texto de entrada y mostrársela al usuario.
+## Paletas de Colores
 
-3. La aplicación debe permitir limpiar el contenido de la caja de texto haciendo
-clic en un botón.
+- **Fondo**: Se ha utilizado el color "seashell" como color de fondo del cuerpo para crear un ambiente tranquilo y agradable, lo que ayuda a los usuarios a concentrarse en el contenido del texto que están analizando.
 
-![Text analyzer demo](https://github-production-user-asset-6210df.s3.amazonaws.com/12631491/240650556-988dcd6f-bc46-473b-894c-888a66c9fe2d.gif "Text analyzer demo")
+- **Elementos resaltados**: Los elementos de la clase "characters" se muestran en un tono de gris claro (#eaeaea), lo que les permite destacar de manera sutil y brinda una sensación de elegancia al diseño general.
 
-## 4. Boilerplate
+- **Destacar información clave**: Se utilizado el color "coral" para resaltar ciertas partes del texto que son especialmente relevantes o importantes. Esto ayuda a los usuarios a identificar rápidamente la información clave en los resultados del análisis.
 
-La lógica del proyecto debe estar implementada completamente en JavaScript. En
-este proyecto NO está permitido usar librerías o frameworks, solo JavaScript
-puro también conocido como Vanilla JavaScript.
+La combinación de estos colores en esta paleta busca lograr una estética visual coherente y agradable, mejorando así la experiencia de los usuarios al interactuar con el Text Analyzer.
 
-Para comenzar este proyecto tendrás que hacer un _fork_ y _clonar_ este
-repositorio que contiene un _boilerplate_ con tests (pruebas). Un _boilerplate_
-es la estructura básica de un proyecto que sirve como un punto de partida con
-archivos y configuración inicial de dependencias y tests.
+Se que esta elección de colores contribuya a crear una experiencia de usuario agradable y eficiente, donde los usuarios puedan realizar análisis de texto de manera intuitiva y sin distracciones visuales.
 
-El boilerplate que les damos contiene esta estructura:
+## Organización del Proyecto
 
-```text
-./
-├── .babelrc
-├── .editorconfig
-├── .eslintrc
-├── .gitignore
-├── README.md
-├── package.json
-├── src
-│   ├── analyzer.js
-│   ├── index.html
-│   ├── index.js
-│   └── style.css
-└── test
-    ├── .eslintrc
-    └── analyzer.spec.js
-```
+### Estructura del proyecto
 
-### Descripción de scripts / archivos
+Se crea una carpeta `src` donde se le asignaron los archivos `index.html`, `styles.css`, `analyzer.js`, `index.js` y proyecto1.md.
 
-* `README.md`: debes modificarlo para explicar la información necesaria para el
-  uso de tu aplicación
-  web, así como una introducción a la aplicación, su funcionalidad y decisiones
-  de diseño que tomaron.
-* `.github/workflows`: esta carpeta contine la configuracion para la ejecution
-  de Github Actions. No debes modificar esta carpeta ni su contenido.
-* `docs/images`: contiene las imagenes de este README.
-* `read-only/`: esta carpeta contiene las pruebas de criterios mínimos de
-  aceptación y end-to-end. No debes modificar esta carpeta ni su contenido.
-* [`src/index.html`](./src/index.html): este es el punto de entrada a tu
-  aplicación. Este archivo debe contener tu HTML.
-* [`src/style.css`](./src/style.css): este archivo debe contener las reglas de
-  estilo. Queremos que escribas tus propias reglas, por eso NO está permitido el
-  uso de frameworks de CSS (Bootstrap, Materialize, etc).
-* [`src/analyzer.js`](./src/analyzer.js): acá debes implementar el objeto
-  `analyzer`, el cual ya está _exportado_ en el _boilerplate_. Este objeto
-  (`analyzer`) debe contener seis métodos:
-  - `analyzer.getWordCount(text)`: esta función debe retornar el recuento de
-  palabras que se encuentran en el parámetro `text` de tipo `string`.
-  - `analyzer.getCharacterCount(text)`: esta función debe retornar el recuento
-  de caracteres que se encuentran en el parámetro `text` de tipo `string`.
-  - `analyzer.getCharacterCountExcludingSpaces(text)`: esta función debe retornar
-  el recuento de caracteres excluyendo espacios y signos de puntuación que se
-  encuentran en el parámetro `text` de tipo `string`.
-  - `analyzer.getNumberCount(text)`: esta función debe retornar cúantos números
-  se encuentran en el parámetro `text` de tipo `string`.
-  - `analyzer.getNumberSum(text)`: esta función debe retornar la suma de todos
-  los números que se encuentran en el parámetro `text` de tipo `string`.
-  - `analyzer.getAverageWordLength(text)`: esta función debe retornar la longitud
-  media de palabras que se encuentran en el parámetro `text` de tipo `string`.
-  En este caso usa 2 dígitos decimales.
+- `index.html`: Archivo principal que contiene la estructura HTML de la página.
+- `styles.css`: Archivo CSS que define los estilos visuales del proyecto.
+- `analyzer.js`: Archivo JavaScript que contiene la lógica y funcionalidad del Text Analyzer.
+- `index.js`: Archivo JavaScript donde se escucha los eventos del DOM, invocaciones de los métodos del objeto analyzer y actualizaciones del resultado en la UI (interfaz de usuario).
+- `proyecto1.md`: Documento actual que proporciona información sobre el proyecto.
 
-  Para ejemplo de uso de cada función recomendamos ver el archivo
-  [`test/analyzer.spec.js`](./test/analyzer.spec.js).
+## Flujo de trabajo
 
-  _Nota:  para simplificar las funcionalidades, definiremos las palabras como
-  un grupos de caracteres separados por espacios. Por ejemplo las palabras del
-  texto de entrada `¡Si, Tú puedes hacerlo!` son cuatro:_
+1. Realicé una planificación inicial para definir los requisitos y funcionalidades del Text Analyzer.
+2. Diseñé la interfaz gráfica utilizando HTML y CSS, siguiendo los principios de diseño responsivo.
+3. Implementé la funcionalidad del Text Analyzer utilizando JavaScript, dividiendo el código en módulos para facilitar el mantenimiento.
+4. Realicé pruebas exhaustivas para asegurarme de que el Text Analyzer funcione correctamente y cumpla con los requisitos establecidos.
+5. Realicé mejoras adicionales en el diseño y la funcionalidad según las retroalimentaciones recibidas.
 
-  - _`¡Si,`_
-  - _`Tú`_
-  - _`puedes`_
-  - _`hacerlo!`_
+## Control de versiones
 
-* [`src/index.js`](./src/index.js): acá debes escuchar eventos del DOM, invocar
-  los métodos del objeto `analyzer` según sea necesario y actualizar el resultado
-  en la UI (interfaz de usuario).
-* [`test/analyzer.spec.js`](./test/analyzer.spec.js): este archivo contiene las
-pruebas unitarias para los métodos del objeto `analyzer`.
+He utilizado Git como sistema de control de versiones para mantener un registro detallado de los cambios realizados en el proyecto.
 
-***
+# Pasos de la realición del proyecto explicando sus funcionalidades. 
 
-#### Deploy
-
-Hacer que los sitios estén publicados (o _desplegados_) para que usuarias de
-la web puedan acceder a él es algo común en proyectos de desarrollo de software.
-
-En este proyecto, utilizaremos _Github Pages_ para desplegar nuestro sitio web.
-
-El comando `npm run deploy` puede ayudarte con esta tarea y también puedes
- consultar su [documentación oficial](https://docs.github.com/es/pages).
-
-## 5. Criterios de aceptación mínimos del proyecto
-
-A continuación encontrarás los criterios de aceptación mínimos del proyecto
-relacionados con cada objetivo de aprendizaje.
-
-### HTML
+1. ## HTML 
 
 * **Uso de HTML semántico**
+- Implementación de la etiqueta `<header>` y `<h1>`. La etiqueta `<header>` en HTML se utiliza para marcar la sección de encabezado o cabecera de un documento HTML o una sección de contenido específica. Representa información introductoria o de navegación que generalmente se encuentra en la parte superior de la página. Por otra parte la etiqueta `<h1>` se utiliza para definir los títulos.
+- La etiqueta `<ul>` en HTML se utiliza para crear una lista desordenada. Una lista desordenada es un conjunto de elementos de lista que no tienen un orden específico y se presentan con viñetas o puntos. Es importante destacar que cada elemento de lista debe estar contenido dentro de un `<li>` y que la etiqueta `<ul>` solo debe contener elementos `<li>` como hijos directos.
+- Luego se utilizó la etiqueta `<textarea>` que se utiliza en HTML para crear un área de texto editable en la que los usuarios pueden ingresar y editar texto de varias líneas.
+- Implementación del uso de la etiqueta `<button>` para permitirle al usuario, mediante un clic, limpiar el contenido de la caja.
+- Implementación de la etiqueta `<footer>` que representa el pie de página de un documento o una sección de contenido.
 
-  - [ ] La aplicación tiene un encabezado conformado por un
-  [`<header>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header)
-  que es padre de un
-  [`<h1>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h1)
-  con texto `Analizador de texto`. Para que puedas practicar más, estos
-  elementos no pueden tener atributos `id`, ni `name`, ni `class`.
+2. ## CSS
 
-  - [ ] La aplicación usa un
-  [`<textarea>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
-  con un el atributo `name` en el valor `user-input` para permitir al usuario
-  ingresar un texto. Para que puedas practicar más, este elemento no puede
-  tener atributos `id`, ni `class`.
+Creación de la hoja de estilos CSS, utilizando los diferentes tipos de selectores.
 
-  - [ ] La aplicación usa un
-  [`<ul>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul)
-  con 6 hijos [`<li>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li),
-  uno para mostrar cada métrica.  Para que puedas practicar más, estos
-  elementos no pueden tener atributos `id` ni `name`.
+* Uso de selectores de CSS
+* Modelo de caja (box model): El modelo de caja (box model) es un concepto fundamental en CSS que define cómo se representa visualmente un elemento en una página web. Consiste en  componentes como: padding, border y margin. Cada componente tiene un propósito específico y se utiliza para controlar la apariencia y el diseño del elemento.
 
-  - [ ] La aplicación tiene un pie de página conformado por un
-  [`<footer>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer)
-  que es padre de un
-  [`<p>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)
-  que tiene como texto el nombre de la estudiante desarrolladora de la aplicación.
-  Para que puedas practicar más, estos elementos no pueden
-  tener atributos `id`, ni `name`, ni `class`.
+Un resumen de cada componente:
 
-  - [ ] La aplicación usa un
-  [`<button>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
-  con el atributo `id` en el valor `reset-button` para permitir al usuario,
-  mediante un clic, limpiar el contenido de la caja de texto.
+- `Padding`: Es un espacio adicional que se coloca entre el contenido y el borde. Se utiliza para proporcionar espacio interno al elemento y separarlo del borde. Se define mediante las propiedades de padding-top, padding-right, padding-bottom y padding-left.
+- `Border`: Es una línea que rodea el contenido y el relleno del elemento. Puede tener diferentes estilos, grosores y colores. Se define mediante las propiedades de border-width, border-style y border-color.
+- `Margin`: Es el espacio que se encuentra fuera del borde, entre el elemento y los elementos adyacentes. Se utiliza para controlar el espaciado entre elementos y crear márgenes visuales entre ellos. Se define mediante las propiedades de margin-top, margin-right, margin-bottom y margin-left.
 
-### CSS
+En resumen, el modelo de caja y sus componentes (`padding`, `border` y `margin`) se utilizan para controlar la apariencia, el espaciado y el diseño de los elementos en una página web. Al ajustar estos componentes con propiedades CSS, se puede lograr el aspecto deseado y controlar cómo los elementos se posicionan y se relacionan entre sí en la página.
 
-* **Uso de selectores de CSS**  
-
-  - [ ] La aplicación usa
-  [`selectores CSS de tipo`](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#type_selectors)
-  para darle estilo al
-  [`<header>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header)
-  y al
-  [`<footer>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer).
-  
-  - [ ] La aplicación usa
-  [`selectores CSS de class`](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#class_selectors)
-  para darle estilo al
-  [`<ul>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul)
-  descrito anteriormente.
-  y sus hijos
-  [`<li>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li).
-  
-  - [ ] La aplicación usa
-  [`selectores de atributo`](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-  para darle estilo al
-  [`<textarea>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
-  usando el atributo `name`.
-
-  - [ ] La aplicación usa
-  [`selectores CSS de ID`](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#id_selectors)
-  para darle estilo al
-  [`<button>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
-  con el atributo `id` en el valor `reset-button`.
-
-* **Modelo de caja (box model): border, margen, padding**
-
-  - [ ] Las
-  [`clases css`](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#class_selectors)
-  de los
-  [`<li>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li)
-  hijos del
-  [`<ul>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul)
-  definen un estilo usando las propiedades del
-  [modelo de caja](https://cssreference.io/box-model/),
-  ([`background`](https://cssreference.io/backgrounds/),
-  `border`,
-  [`margin`](https://cssreference.io/property/margin/),
-  [`padding`](https://cssreference.io/property/padding/)).
-
-### Web APIs
+3. ## Web APIs
 
 * **Uso de selectores del DOM**
 
-  - [ ] La aplicación usa el
-  [`selector del DOM querySelector`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector).
+- querySelector: Es un método utilizado en JavaScript para seleccionar elementos HTML en función de un selector CSS. Permite obtener una referencia a un elemento específico o a un conjunto de elementos en el DOM (Documento de Objetos del Modelo).
 
-  - [ ] La aplicación usa el
-  [`selector del DOM getElementById`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById).
-  
+La sintaxis básica del método querySelector es la siguiente:
+
+```js
+document.querySelector(selector)
+```
+
+Donde:
+* `document` se refiere al objeto global del DOM.
+* `querySelector` es el método que se utiliza para seleccionar elementos.
+* `selector` es una cadena de texto que representa el selector CSS utilizado para identificar los elementos deseados.
+
+El método `querySelector` devuelve el primer elemento que coincide con el selector especificado. Si no se encuentra ningún elemento, devuelve null.
+
+- getElementById: Es un método utilizado en JavaScript para obtener una referencia a un elemento HTML específico en el DOM (Documento de Objetos del Modelo) utilizando su ID.
+
+La sintaxis del método getElementById es la siguiente:
+
+```js
+document.getElementById(id)
+```
+
+Donde: 
+
+* `document` se refiere al objeto global del DOM.
+* `getElementById` es el método utilizado para buscar un elemento por su ID.
+* `id` es una cadena de texto que representa el ID del elemento que deseas obtener.
+
+El método getElementById devuelve el elemento HTML que tiene el ID especificado. Si no se encuentra ningún elemento con ese ID, devuelve null.
+
+El método getElementById es útil cuando se necesita acceder a un elemento específico del DOM y se conoce su ID. Es una forma rápida y sencilla de obtener una referencia directa a ese elemento en JavaScript.
+
 * **Manejo de eventos del DOM (listeners, propagación, delegación)**
 
-  - [ ] La aplicación registra un
-  [Event Listener](https://developer.mozilla.org/en/docs/Web/API/EventTarget/addEventListener)
-  para escuchar el evento `keyup` del `<textarea>` para actualizar las métricas
-  cuando se haga escriba en el cuadro de texto.
+Un event listener (escuchador de eventos) es una función que se utiliza en JavaScript para "escuchar" o "observar" eventos que ocurren en un elemento HTML o en el documento en general. Permite ejecutar código en respuesta a un evento específico, como un clic del mouse, una pulsación de tecla, el cambio de valor de un campo de entrada, entre otros.
 
-  - [ ] La aplicación registra un
-  [Event Listener](https://developer.mozilla.org/en/docs/Web/API/EventTarget/addEventListener)
-  para escuchar el evento `click` del `<button>` que limpia el contenido de la
-  caja de texto.
+Los event listeners se agregan a los elementos HTML para que puedan responder a interacciones del usuario o a cambios en el estado de la página. Cuando ocurre el evento especificado, se ejecuta la función de event listener asociada.
+
+La sintaxis básica para agregar un event listener a un elemento HTML es la siguiente:
+
+```js
+elemento.addEventListener(evento, función)
+```
+
+Donde:
+
+* `elemento` es el elemento HTML al que deseas agregar el event listener.
+* `evento` es una cadena de texto que representa el tipo de evento que deseas escuchar, como "click", "keydown", "change", etc. En este proyecto se utilizo "click" y "keyup"
+* `función` es la función que se ejecutará cuando ocurra el evento. Puede ser una función existente o una función anónima.
+
+`función anónima`: No tiene un nombre específico asociado. En lugar de ser definida con un nombre identificador, se declara directamente como una expresión de función. Aunque no tiene un nombre, puede ser asignada a una variable o utilizada como argumento de otra función.
+
+`función existente` : Definida previamente con un nombre específico y se puede invocar utilizando ese nombre.
 
 * **Manipulación dinámica del DOM**
-  - [ ] La aplicación actualiza el atributo
-  [`textContent`](https://developer.mozilla.org/es/docs/Web/API/Node/textContent)
-  o
-  [`innerHTML`](https://developer.mozilla.org/es/docs/Web/API/Element/innerHTML)
-  de los `<li>` que mostrar las métricas del texto.
 
-### JavaScript
+- `textContent` y `innerHTML`: Son propiedades que se utilizan en JavaScript para acceder al contenido textual de un elemento HTML y para establecer o modificar dicho contenido.
 
-* **Tipos de datos primitivos**
+Algunas de sus diferencias son: 
 
-  - [ ] La aplicación convierte valores tipo `string` a tipo `number`.
+1. Contenido manipulado:
+- `textContent` obtiene o establece el contenido textual de un elemento, sin procesar las etiquetas HTML presentes en él.
+- `innerHTML` obtiene o establece el contenido HTML interno de un elemento, incluyendo las etiquetas HTML y el texto que pueda haber dentro de él.
 
-* **Strings (cadenas de caracteres)**
+2. Tratamiento de etiquetas HTML:
+- `textContent` considera las etiquetas HTML como texto plano y las muestra tal como están, sin interpretarlas como elementos HTML.
+- `innerHTML` interpreta y renderiza las etiquetas HTML presentes en el contenido y las trata como elementos HTML
 
-  - [ ] La aplicación usa métodos para manipular strings como
-  [`split`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split),
-  [`trim`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim)
-  o
-  [`replace`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace).
+3. Seguridad:
+- `textContent` es más seguro en términos de seguridad, ya que garantiza que cualquier contenido ingresado se trate como texto y no como código ejecutable. Esto ayuda a prevenir ataques de scripts maliciosos (XSS).
+- `innerHTML` puede ser menos seguro, ya que si se establece contenido HTML sin una sanitización y validación adecuadas, se corre el riesgo de permitir la ejecución de código malicioso.
 
-* **Variables (declaración, asignación, ámbito)**
+4. Estructura del DOM:
+- `textContent` no afecta la estructura del DOM, ya que solo trata el contenido como texto sin interpretar las etiquetas HTML.
+- `innerHTML` puede afectar la estructura del DOM, ya que puede agregar, modificar o eliminar elementos HTML dentro del elemento objetivo.
 
-  - [ ] La aplicación declara variables con
-  [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
-  y
-  [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const).
+5. Rendimiento:
+- `textContent` generalmente tiene un rendimiento mejor que `innerHTML`, ya que no implica el procesamiento y renderizado de las etiquetas HTML presentes en el contenido.
 
-  - [ ] La aplicación NO declara variables con  `var`.
+En resumen, `textContent` es más adecuado cuando se necesita acceder o establecer el contenido textual simple de un elemento, mientras que `innerHTML` es más adecuado cuando se desea manipular el contenido HTML, incluyendo etiquetas y texto dentro del elemento. Sin embargo, se debe tener cuidado al utilizar `innerHTML` para evitar problemas de seguridad.
 
-* **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
+4. ## JavaScript
 
-  - [ ] La aplicación usa el statement
-  [`if..else`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
-  para evaluar condiciones.
+Implementación de las funcionalidades.
 
-* **Uso de bucles/ciclos (while, for, for..of)**
+## **Recuento de palabras:** 
 
-  - [ ] La aplicación usa el statement
-  [`for`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
-  para crear un bucle.
+La aplicación cuenta el número de palabras en el texto de entrada y muestra este recuento al usuario. Trabajando así de la siguiente manera. 
 
-* **Funciones (params, args, return)**
+```js
+getWordCount: (text) => {
+  const words = text.split(" ");
+  const wordCount = words.length;
+  return wordCount;
+}
+```
+*Explicación paso a paso del código:*
 
-  - [ ] El objeto `analyzer` contiene un método `getWordCount` para calcular el
-  recuento de palabras de un texto.
+1. La función recibe un parámetro `text` que es de tipo string y representa el texto de entrada.
+2. `const words = text.split(" ")`; se utiliza el método `split(" ")` para dividir el texto en palabras. El separador utilizado es un espacio en blanco.
+3. Esto devuelve un array de palabras.
+4. `const wordCount = words.length`; se obtiene la longitud del array de palabras, que corresponde al número de palabras en el texto.
+5. Se devuelve el valor de `wordCount`, que representa el recuento de palabras en el texto
 
-  - [ ] El objeto `analyzer` contiene un método `getCharacterCount` para calcular
-  el recuento de caracteres de un texto.
+## **Recuento de caracteres:** 
 
-  - [ ] El objeto `analyzer` contiene un método `getCharacterCountExcludingSpaces`
-  para calcular el recuento de caracteres excluyendo espacios y signos de
-  puntuación de un texto.
+La aplicación cuenta el número de caracteres en el texto de entrada, incluidos espacios y signos de puntuación, y muestra este recuento al usuario.
 
-  - [ ] El objeto `analyzer` contiene un método `getNumbersCount` para contar
-  cúantos números hay en un texto.
+```js
+getCharacterCount: (text) => {
+  const charaterCount = text.length;
+  return charaterCount;
+}
+```
 
-  - [ ] El objeto `analyzer` contiene un método `getNumbersSum` para la suma
-  longitud media de los números en un texto.
+*Explicación paso a paso del código:*
 
-  - [ ] El objeto `analyzer` contiene un método `getAverageWordLength` para
-  calcular la longitud media de las palabras en un texto.
+1. La función recibe un parámetro 'text' que es de tipo string y representa el texto de entrada.
+2. `const charaterCount = text.length`; se utiliza la propiedad 'length' para obtener la longitud del texto, que corresponde al número de caracteres.
+3. Se devuelve el valor de `characterCount`, que representa el recuento de caracteres en el texto.
 
-* **Pruebas unitarias (unit tests)**
+## **Recuento de caracteres excluyendo espacios y signos de puntuación:** 
 
-  - [ ] Se pasan todas las pruebas unitarias.
+La aplicación cuenta el número de caracteres en el texto de entrada, excluyendo espacios y signos de puntuación, y muestra este recuento al usuario.
 
-* **Módulos de ECMAScript (ES Modules)**
+```js
+getCharacterCountExcludingSpaces: (text) => {
+    
+    let characterCountExcludingSpaces = text.replace(/[^\w\s]|_/g, "").replace(/\s+/g, "").trim().length;
+    return characterCountExcludingSpaces;
+}
+```
 
-  - [ ] La aplicación usan
-  [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
-  y
-  [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
-  para importar y exportar valores desde un modulo JavaScript.
+*Explicación paso a paso del código:*
 
-* **Uso de linter (ESLINT)**
+A. `text.replace(/[^\w\s]|_/g, "")`: Esta línea utiliza el método replace en el texto `text` para reemplazar ciertos caracteres. La expresión regular `/[^\w\s]|_/g` busca caracteres que no son alfanuméricos (`[^\w\s]`) o el guion bajo (`_`). La `g` al final indica que se deben buscar todas las ocurrencias. Estos caracteres encontrados son reemplazados por una cadena vacía, es decir, se eliminan del texto.
 
-  - [ ] Al ejecutar el linter no se muestran errores de formato y estilo.
+***Explicación paso a paso de la expresión regular `/[^\w\s]|_/g`***
 
-* **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
+1. `/`: Las expresiones regulares en JavaScript se delimitan por barras diagonales /. Esta barra diagonal indica el inicio de la expresión regular.
+2. `[^\w\s]`: Los corchetes [] se utilizan para definir una clase de caracteres. En este caso, `^\w\s` es la clase de caracteres.
+  - `^\w`: El acento ^ dentro de una clase de caracteres negada indica que se deben excluir los caracteres que coincidan con esta clase.
+  - `\w`: El caracter `\w` representa cualquier carácter alfanumérico, es decir, letras del alfabeto (mayúsculas y minúsculas) y dígitos del 0 al 9.
+  - `\s`: El caracter `\s` representa cualquier espacio en blanco, incluyendo espacios, tabulaciones y saltos de línea.
 
-  - [ ] En el código se utilizan identificadores descriptivos para variables
-  y funciones.
+Entonces, `[^\w\s]` representa cualquier carácter que no sea alfanumérico ni un espacio en blanco.
 
-### Control de Versiones (Git y GitHub)
+3. `|`: El símbolo de barra vertical `|` se utiliza para indicar una alternativa. En este caso, la alternativa es `_`, que es el guion bajo.
+4. `_/g`: Después del símbolo de barra vertical viene `_`, que representa el guion bajo. Esta alternativa se utiliza para incluir el guion bajo como parte de la expresión regular.
+5. `/`: La barra diagonal indica el final de la expresión regular.
+6. `g`: La `g` al final de la expresión regular indica que la búsqueda debe realizarse de forma global, es decir, encontrar todas las ocurrencias en lugar de detenerse después de encontrar la primera coincidencia.
 
-* **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
+En resumen, la expresión regular `/[^\w\s]|_/g` busca cualquier carácter que no sea alfanumérico ni un espacio en blanco, o el guion bajo, y se utiliza para realizar reemplazos en el texto en la función `getCharacterCountExcludingSpaces`.
 
-  - [ ] La estudiante creó una cuenta en Github.
+B. `.replace(/\s+/g, "")`: Después de haber realizado el reemplazo anterior, esta línea se encarga de eliminar los espacios en blanco adicionales que puedan haber quedado en el texto. La expresión regular `/\s+/g` busca una o más ocurrencias de espacios en blanco consecutivos y los reemplaza por una cadena vacía.
 
-  - [ ] La estudiante configuró su cuenta de Github con una llave SSH.
+***Explicación paso a paso de la expresión regular `/\s+/g`***
 
-* **Git: Control de versiones con git (clone, add, commit, push)**
+1. `/`: Al igual que en el caso anterior, la barra diagonal indica el inicio de la expresión regular.
+2. `\s+`: Aquí tenemos el caracter `\s` seguido del símbolo `+`.
+  - `\s`: El caracter `\s` representa cualquier espacio en blanco, incluyendo espacios, tabulaciones y saltos de línea.
+  - `+`: El símbolo `+` indica que el espacio en blanco puede aparecer una o más veces de forma consecutiva.
 
-  - [ ] La estudiante creó un _fork_ para su proyecto.
+En resumen, `\s+` representa una o más repeticiones de espacios en blanco consecutivos.
+
+3. `/`: La barra diagonal indica el final de la expresión regular.
+4. `g`: Al igual que antes, la `g` al final indica que la búsqueda debe realizarse de forma global para encontrar todas las ocurrencias en lugar de detenerse después de encontrar la primera coincidencia.
+
+En resumen, la expresión regular `/\s+/g` busca cualquier secuencia de espacios en blanco consecutivos en el texto y se utiliza para realizar reemplazos en la función `getCharacterCountExcludingSpaces`.
+
+C. `.trim().length`: Finalmente, se aplica el método `trim` al texto para eliminar cualquier espacio en blanco al inicio o al final. Luego, se obtiene la propiedad `length` del texto resultante, que representa la cantidad de caracteres en el texto después de haber realizado los reemplazos anteriores.
+
+En resumen, esta función `getCharacterCountExcludingSpaces` retorna la cantidad de caracteres en el texto `text`, excluyendo los espacios en blanco y los caracteres no alfanuméricos.
+
+Otra manera de realizar el código:
+
+```js
+getCharacterCountExcludingSpaces: (text) => {
+  const punctuation = [",", ".", "!", "?", ";", ":", "-", "'", '"', "{", "}", "+", "=", "<", ">", "$", "#", "@", "%", "^", "*", "(", ")", "_", "|", "~", "`", "&", "[", "]", "/"];
+  
+  function isPunctuation(char) {
+    for(let i = 0; i < punctuation.length; i++) {
+      if (char === punctuation[i]) {
+        return true;
+      }
+    }
+    
+    return false;
+  }
+
+  let cleanedText = " ";
+
+  for (let i = 0; i < text.length; i++) {
+    let char = text[i];
+
+    if (char !== " " && !isPunctuation(char)) {
+      cleanedText += char;
+    }
+  }
+
+  let characterCountExcludingSpaces = cleanedText.trim().length;
+
+  return characterCountExcludingSpaces;
+}
+```
+
+*Explicación paso a paso del código:* 
+
+1. Se define un array `punctuation` que contiene los signos de puntuación que queremos excluir.
+2. Se declara una función `isPunctuation` que recibe un carácter `char` y verifica si es un signo de puntuación. La función itera sobre el array `punctuation` y compara cada elemento con el carácter. Si encuentra una coincidencia, devuelve `true`. Si no encuentra ninguna coincidencia al final del bucle, devuelve `false`.
+3. Se inicializa la variable `cleanedText` como una cadena vacía.
+4. Se itera sobre cada carácter del texto de entrada utilizando un bucle `for`. En cada iteración, se comprueba si el carácter no es un espacio en blanco y no es un signo de puntuación utilizando la función `isPunctuation`. Si cumple esta condición, se agrega el carácter a la variable `cleanedText`.
+5. Después de completar el bucle, se elimina cualquier espacio en blanco adicional al principio o al final de la cadena `cleanedText` utilizando el método `trim()`.
+6. Se obtiene la longitud de la cadena `cleanedText` y se asigna a la variable `characterCountExcludingSpaces`.
+7. Se retorna el valor de `characterCountExcludingSpaces`.
+
+En resumen, esta función recorre el texto de entrada carácter por carácter, excluyendo los espacios en blanco y los signos de puntuación, y cuenta la cantidad de caracteres resultante.
+
+## **Recuento de números:** 
 
-  - [ ] La estudiante clonó su repositorio usando una llave SSH.
+La aplicación cuenta cúantos números hay en el texto de entrada y muestra este recuento al usuario.
+
+```js
+getNumberCount: (text) => {
+  const words = text.split(" ");
+  let numberCount = 0;
+  
+  for(let i = 0; i < words.length; i++){
+    const char = words[i];
+    
+    if(Number(char)){
+      numberCount++;
+    } 
+  }
+  
+  return numberCount;
+}
+```
+
+*Explicación paso a paso del código:*
+
+1. La función recibe un parámetro `text` que es de tipo string y representa el texto de entrada.
+2. Se divide el texto en palabras individuales utilizando el método `split` con el espacio como separador y se almacenan en el array `words`.
+3. Se inicializa la variable `numberCount` con el valor 0. Esta variable se utilizará para contar los números encontrados.
+4. Se inicia un bucle `for` que recorre cada elemento en el array `words`. En cada iteración, se asigna el elemento actual a la variable `char`.
+5. Dentro del bucle, se verifica si `char` se puede convertir a un número válido utilizando la función `Number` que se utiliza para convertir un valor en su representación numérica, puede ser utilizada con diferentes tipos de datos, como cadenas de texto (strings), booleanos y otros valores. Si la conversión es exitosa, lo cual significa que `char` es un número válido, se incrementa `numberCount` en `1`. Esto significa que hemos encontrado un número en el texto.
+6. Finalmente, fuera del bucle, se devuelve el valor de `numberCount`, que representa la cantidad total de números encontrados en el texto.
+
+En resumen, la función `getNumberCount` divide el texto en palabras y luego itera sobre cada palabra para verificar si se puede convertir a un número. Si es así, se incrementa el contador de números `numberCount`. Al final, se devuelve el resultado de `numberCount`, que representa la cantidad total de números encontrados en el texto
+
+## **Suma total de números:** 
+
+La aplicación cuenta todos los números que hay en el texto de entrada y muestra el resultado al usuario.
+
+```js
+getNumberSum: (text) => {
+  const words = text.split(" ");
+  let numberSum = 0;
+    
+  for(let i = 0; i < words.length; i++){
+    const char = words[i];
 
-  - [ ] La estudiante creó _commits_ y los guardó en Github.
+    if(Number(char)){
+      numberSum += parseFloat(char);
+    }
+  }
+  
+  return numberSum;
+}
+```
 
-* **GitHub: Despliegue con GitHub Pages**
+*Explicación paso a paso del código:*
+
+1. La función `getNumberSum` recibe un parámetro `text`, que es una cadena de texto en la que queremos buscar números y calcular su suma.
+2. En esta línea, se declara una variable llamada `words` que almacena un array de palabras obtenidas al dividir el texto en base a los espacios. La función `split(" ")` divide el texto en palabras separadas por espacios y crea un array con esas palabras.
+3. La variable `numberSum` se inicializa como 0 y se utilizará para almacenar la suma total de los números encontrados.
+4. Comienza un bucle `for` que recorre cada elemento en el array `words`. En cada iteración, se asigna la palabra actual a la variable `char`.
+5. Se verifica si `char` se puede convertir a un número válido utilizando la función `Number()`. Si la conversión es exitosa y `char` representa un número, se ejecuta el bloque de código dentro de este `if`.
+6. Dentro del `if`, se utiliza `parseFloat` para convertir `char` en un número decimal (punto flotante) y se suma ese valor a la variable `numberSum`. Esto permite acumular la suma de los números encontrados en el texto.
+7. Finalmente, se retorna el valor de `numberSum`, que representa la suma de todos los números encontrados en el texto.
 
-  - [ ] La aplicación está desplegada en Github Pages.
+En resumen, esta función divide el texto en palabras y luego itera sobre cada palabra. Si una palabra puede ser convertida a un número válido, se suma ese número a la variable `numberSum`. Al final, se devuelve la suma total de los números encontrados en el texto.
+## **Longitud media de las palabras:** 
 
-### Centrado en el usuario
+La aplicación calcula la longitud media de las palabras en el texto de entrada y se la muestra al usurio al usuario.
 
-* **Diseñar y desarrollar un producto o servicio poniendo a las
-usuarias en el centro**
+```js
+getAverageWordLength: (text) => {    
+  const words = text.split(" ");
+  let sum = 0;
 
-### Diseño de producto
+  for (let i = 0; i < words.length; i++) {
+    sum += words[i].length;
+  }
 
-* **Diseñar en distintos niveles de fidelidad**
+  const averageWordLength = sum / words.length;
+  const averageWordLengthRounded = averageWordLength.toFixed(2);
 
-  - [ ] La estudiante creó prototipos de baja fidelidad para la UI (interfaz gŕafica).
+  return parseFloat(averageWordLengthRounded);
+}
+```
 
-* **Seguir los principios básicos de diseño visual**
+*Explicación paso a paso del código:*
 
-  - [ ] Se tuvieron en cuenta las reglas básica del
-  [diseño visual](https://coda.io/d/Bootcamp-UX-Contenido_dqkqk2rV9Z2/Reglas-basicas-de-diseno-visual_suVcO)
-  para diseñar la UI (interfáz gráfica)
+1. Se define una función `getAverageWordLength` que toma un parámetro `text`, que se espera que sea una cadena de texto.
+2. Se divide el texto en palabras utilizando el método `split(" ")`. Esto crea un array llamado words que contiene cada palabra del texto como un elemento separado.
+3. Se declara una variable `sum` e inicializa con el valor `0`. Esta variable se utilizará para sumar la longitud de todas las palabras.
+4. Se inicia un bucle `for` que recorre cada palabra en el array `words`. La variable de control del bucle `i` se inicializa en `0`, y el bucle se ejecutará mientras `i` sea menor que la longitud de `words`.
+5. Dentro del bucle, se accede a cada palabra utilizando `words[i]` y se obtiene su longitud utilizando la propiedad `length`. Luego, se suma la longitud de la palabra actual a la variable `sum`.
+6. Después de completar el bucle, se calcula la longitud promedio dividiendo la suma total (`sum`) entre la cantidad de palabras en el texto (`words.length`). El resultado se almacena en la variable `averageWordLength`.
+7. Se utiliza el método `toFixed(2)` en averageWordLength para redondear el resultado a dos decimales. La función `toFixed()` se utiliza para redondear un número decimal a una cantidad específica de decimales y devuelve una cadena de texto que representa el número redondeado. Se usa de la siguiente manera: `numero.toFixed(decimales)`. Donde `numero` es el número al que se le aplicará el redondeo y `decimales` es la cantidad de decimales a los que se desea redondear.
+8. El valor redondeado de `averageWordLength` se convierte en un número utilizando `parseFloat()` que se utiliza para convertir una cadena de texto que representa un número en un valor de tipo `float` (número de coma flotante). Convierte la cadena en un número decimal y lo devuelve.  
 
-## 6. Pruebas
+En resumen, la función `getAverageWordLength` divide el texto en palabras, calcula la suma de las longitudes de las palabras y luego divide esa suma entre la cantidad de palabras para obtener la longitud promedio. El resultado se redondea a dos decimales y se devuelve como número.
 
-Este proyecto cuenta con 3 conjuntos de pruebas que te ayudarán a conocer si
-cumples los criterios mínimos de aceptación.
+5. ## Funcionalidades opcionales.
 
-### Pruebas unitarias
+Se realizó algunas funciones opciones, como: 
 
-Una prueba unitaria es una técnica de prueba de software en la que se comprueba
-que cada componente individual de un programa o sistema funciona correctamente
-de manera aislada. En otras palabras, se prueba cada unidad de código por
-separado para asegurarse de que cumpla con los requisitos y especificaciones.
+* El recuento de palabras y caracteres sea 0 para una entrada de texto vacía.
+* El recuento de palabras y caracteres sea 0 para una entrada de texto con solo espacios.
+* El recuento de palabras y caracteres sea 0 para una entrada de texto con solo caracteres de puntuación.
+* El recuento de promedio longitud sea 0 para una entrada de texto con solo caracteres de puntuación.
 
-Las pruebas unitarias de este proyecto ejecutarán los métodos `getWordCount`,
-`getCharacterCount`, `getCharacterCountExcludingSpaces`, `getNumbersCount`,
-`getNumbersSum` y `getAverageWordLength` con diferentes argumentos y se
-confirmará que los valores retornados sean los esperados.
+Por lo tanto se hicieron algunas modificaciones en las funciones: 
 
-Puedes ejecutar estas pruebas con el comando `npm run test` como se muestra
-en la siguiente imagen:
+- `getWordCount(text)`
+- `getCharacterCount(text)`
+- `getAverageWordLength(text)`
 
-![npm run test](https://github-production-user-asset-6210df.s3.amazonaws.com/12631491/240650584-c8267968-d631-4fbb-b05f-458a970544b7.gif "npm run test")
+## **Recuento de caracteres:**
 
-El _boilerplate_ incluye tareas que ejecutan [eslint](https://eslint.org/) y
-[htmlhint](https://github.com/yaniswang/HTMLHint) para verificar el `HTML` y
-`JavaScript` con respecto a una guías de estilos. Ambas tareas se ejecutan
-automáticamente antes de ejecutar las pruebas unitarias cuando usamos el comando
-`npm run test`. En el caso de `JavaScript` estamos usando un archivo de
-configuración de `eslint` que se llama `.eslintrc` que contiene un mínimo de
-información sobre el parser que usar (qué version de JavaScript/ECMAScript), el
-entorno (browser en este caso) y
-las [reglas recomendadas (`eslint:recommended`)](https://eslint.org/docs/rules/).
-En cuanto a reglas/guías de estilo en sí,
-usaremos las recomendaciones _por defecto_ de tanto `eslint` como `htmlhint`.
+```js
+getWordCount: (text) => {
+  
+  if (text.trim() === "" || /^[,.:;«»[\]{}()¿?¡!\-"']+$/g.test(text)) {
+    return 0;
+  }
+        
+  const words = text.split(" ");
+  const wordCount = words.length;
+    
+  return wordCount;
+}
+```
 
-### Pruebas de criterios mínimos de aceptación
+*Explicación paso a paso del código:*
 
-Estas pruebas analizarán tus archivos
-[`index.html`](src/index.html),
-[`index.js`](src/index.html),
-[`analyzer.js`](src/analyzer.js)
-y
-[`style.css`](src/style.css)
-para verificar que cumples con los
-[criterios minimos de aceptacion](#5-objetivos-de-aprendizaje-y-criterios-de-aceptación-mínimos-del-proyecto).
-Cada criterio esta relacionado con un objetivo de aprendizaje.
+1. `getWordCount: (text) => {`: Esta línea define una función llamada getWordCount que toma un parámetro text. La función calculará el número de palabras en el texto.
 
-Puedes ejecutar todas estas pruebas con el comando `npm run test:oas`
-como se muestra en la siguiente imagen:
+2. `if (text.trim() === "" || /^[,.:;«»[\]{}()¿?¡!\-"']+$/g.test(text)) {`: Esta línea verifica si el texto está vacío o si contiene solo caracteres de puntuación. Utiliza una expresión regular `(/^[,.:;«»[\]{}()¿?¡!\-"']+$/g)` para realizar la prueba. Si el texto cumple alguna de estas condiciones, la función devuelve 0, lo que indica que no hay palabras en el texto.
 
-![npm run test oas](https://github-production-user-asset-6210df.s3.amazonaws.com/12631491/240650602-f0ca9170-7563-4edc-9e78-874fa012c4fd.gif "npm run test oas")
+3. `const words = text.split(" ");`: Esta línea divide el texto en palabras individuales utilizando el método `split(" ")`, que divide el texto en cada espacio en blanco y devuelve un arreglo de palabras.
 
-Puedes ejecutar las pruebas de cada grupo de objetivos de aprendizaje de
-manera individual con los siguientes comandos:
+4. `const wordCount = words.length;`: Esta línea asigna la longitud del arreglo words a la variable wordCount. Esto representa el número total de palabras en el texto.
 
-* `npm run test:oas-html`
-* `npm run test:oas-css`
-* `npm run test:oas-web-api`
-* `npm run test:oas-js`
+5. `return wordCount;`: Finalmente, la función devuelve el valor de `wordCount`, que es el número de palabras en el texto.
 
-#### Pruebas end-to-end
+En resumen, esta función `getWordCount` calcula el número de palabras en un texto dado. Comienza verificando si el texto está vacío o contiene solo caracteres de puntuación. Si es así, devuelve 0. De lo contrario, divide el texto en palabras y devuelve la cantidad total de palabras.
 
-Una prueba end-to-end (E2E) es una técnica de prueba de software en la que
-se verifica el funcionamiento de todo el sistema desde el inicio hasta el
-final. En otras palabras, se prueba el flujo completo del software, simulando
-la interacción del usuario con la aplicación, para asegurarse de que todas las
-partes del sistema funcionan correctamente en conjunto.
+## **Recuento de caracteres:**
 
-Puedes ejecutar estas pruebas con el comando `npm run test:e2e` como se muestra
-en la siguiente imagen:
+```js
+getCharacterCount: (text) => {
+  
+  if (text === "") {
+    return 0;
+  }
+  
+  const charaterCount = text.length;
+  return charaterCount;
+}
+```
 
-![npm run test e2e](https://github-production-user-asset-6210df.s3.amazonaws.com/12631491/240650622-a4da630e-8d39-4dd8-9fde-1a38c31a53e2.gif "npm run test e2e")
+*Explicación paso a paso del código:*
 
-### Github actions
+1. `getCharacterCount: (text) => {`: Esta línea define una función llamada `getCharacterCount` que toma un parámetro `text`. La función calculará el número de caracteres en el texto.
 
-Este repositorio usa una GitHub Action para ejecutar automáticamente
-las pruebas unitarias, pruebas de criterios mínimos de aceptación y
-y pruebas end-to-end cada vez que se hagas un _push_ en la rama
-_main_ de tu repositorio.
+2. `if (text === "") {`: Esta línea verifica si el texto está vacío. Si es así, significa que no hay caracteres en el texto y la función devuelve 0.
 
-Puedes consultar el resultado de esta Github Action
-en la pestaña _Actions_ de tu repositorio en Github
-como se muestra en la siguiente imagen:
+3. `return 0;`: Si el texto está vacío, la función termina aquí y devuelve 0, indicando que no hay caracteres en el texto.
 
-![Github Action](https://github-production-user-asset-6210df.s3.amazonaws.com/12631491/240650640-a8a8ed26-6f48-4053-8b3b-7dec7e35a9f8.gif "Github Action")
+4. `const charaterCount = text.length;`: Si el texto no está vacío, esta línea asigna la longitud del texto a la variable `charaterCount`. Esto representa el número total de caracteres en el texto, incluyendo espacios en blanco y caracteres especiales.
 
-## 7. Pistas, tips y lecturas complementarias
+5. `return charaterCount;`: Finalmente, la función devuelve el valor de `charaterCount`, que es el número de caracteres en el texto.
 
-### Prepara tu PC para trabajar
+En resumen, esta función `getCharacterCount` calcula el número de caracteres en un texto dado. Verifica si el texto está vacío y devuelve 0 en ese caso. Si el texto no está vacío, simplemente devuelve la longitud del texto, que representa el número total de caracteres.
 
-Antes de comenzar instala lo siguiente:
+## **Longitud media de las palabras:**
 
-1. [Node.js](https://nodejs.org/)
-2. [git](https://git-scm.com/download/) Si estas en Linux es muy probable que
-  ya este instalado 👀.
-  Para conocer más de git visita
-  [este enlace](https://curriculum.laboratoria.la/es/topics/scm/01-git)
-3. Un editor de código, te sugerimos [Code](https://code.visualstudio.com/)
+```js
+getAverageWordLength: (text) => {    
+  const punctuation = /^[,.:;«»[\]{}()¿?¡!\-"']+$/g;
+    
+  if (punctuation.test(text)) {
+    return 0;
+  }
+    
+  const words = text.split(" ");
+  let sum = 0;
 
-Después en [GitHub](https://github.com/):
+  for (let i = 0; i < words.length; i++) {
+    sum += words[i].length;
+  }
 
-1. Crear una cuenta. Conoce más de GitHub en este
-  [link](https://curriculum.laboratoria.la/es/topics/scm/02-github/01-github)
-2. Realiza un fork de este proyecto
-3. Configura tu SSH Key  en GitHub. Puedes revisar este
-[video](https://www.youtube.com/watch?v=g0ZV-neSM7E) o
-[artículo](https://docs.github.com/es/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+  const averageWordLength = sum / words.length;
+  const averageWordLengthRounded = averageWordLength.toFixed(2);
 
-Luego en una [shell](https://curriculum.laboratoria.la/es/topics/shell)
-ejecuta lo siguiente. Si estas en Windows puedes usar Git Bash:
+  return parseFloat(averageWordLengthRounded);
+}
+```
 
-1. Clona el fork en tu PC
-2. Ubica la shell en el proyecto que clonaste
-3. Instala las dependencias del proyecto con `npm install`
-4. Instala `playwright` con `npx playwright install chromium --with-deps`
-5. Para arrancar el servidor web `npm start` y dirígete a
-   `http://localhost:3000` en tu navegador.
-6. A codear se ha dicho! :rocket:
+1. `getAverageWordLength: (text) => {`: Se define una función llamada `getAverageWordLength` que toma un parámetro text. La función calculará la longitud promedio de las palabras en el texto.
 
-### Recursos y temas relacionados
+2. `const punctuation = /^[,.:;«»[\]{}()¿?¡!\-"']+$/g;`: Se crea una expresión regular llamada punctuation que busca caracteres de puntuación en el texto. Esta expresión regular se utilizará más adelante para verificar si el texto contiene solo caracteres de puntuación.
 
-Súmate al canal de Slack [#project-text-analyzer](https://claseslaboratoria.slack.com/archives/C058GP6K9NY)
+3. `if (punctuation.test(text)) {`: Se utiliza el método `test()` de la expresión regular para verificar si el texto contiene solo caracteres de puntuación. Si es así, la función devuelve 0, ya que no hay palabras para calcular una longitud promedio.
 
-## 8. Consideraciones para pedir tu Project Feedback
+4. `const words = text.split(" ");`: Se divide el texto en palabras individuales utilizando el método `split(" ")`, que divide el texto en cada espacio en blanco y devuelve un arreglo de palabras.
 
-Antes de agendar tu Project Feedback con un coach, asegúrate que tu proyecto:
+5. `let sum = 0;`: Se inicializa una variable sum que se utilizará para almacenar la suma de las longitudes de todas las palabras.
 
-* [ ] Cumple con todos los criterios mínimos de aceptación al ejecutar `npm run test:oas`
-* [ ] Cumple con todas las pruebas unitarias al ejecutar `npm run test`
-* [ ] Cumple con todas las pruebas _end to end_ al ejecutar `npm run test:e2e`
-* [ ] Esta libre de _errores_ de `eslint` al ejecutar `npm run test`
-* [ ] Está subido a GitHub.
-* [ ] Esta desplegado en GitHub Pages.
-* [ ] Tiene un README con la definición del producto.
+6. `for (let i = 0; i < words.length; i++) {`: Este bucle for itera a través de todas las palabras en el arreglo words.
 
-Recuerda que debes hacer una autoevaluación de _objetivos de aprendizaje_ y
-_life skills_ desde tu dashboard de estudiante.
+7. `sum += words[i].length;`: Dentro del bucle, se agrega la longitud de cada palabra al valor de `sum`.
 
-Si no has completado todo lo anterior, no consideramos que estás lista para
-tu sesión de Project Feedback.
+8. `const averageWordLength = sum / words.length;`: Después de completar el bucle, se calcula la longitud promedio dividiendo la suma de las longitudes de las palabras entre la cantidad de palabras.
 
-## 9. Objetivos de aprendizaje
+9. `const averageWordLengthRounded = averageWordLength.toFixed(2);`: Esta línea redondea la longitud promedio a 2 decimales utilizando el método `toFixed(2)` y la asigna a la variable `averageWordLengthRounded`.
 
-Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
+10. `return parseFloat(averageWordLengthRounded);`: Finalmente, la función devuelve el valor de `averageWordLengthRounded` como un número de punto `flotante (float)`.
 
-### HTML
+En resumen, esta función `getAverageWordLength` calcula la longitud promedio de las palabras en un texto dado. Verifica si el texto contiene solo caracteres de puntuación y devuelve 0 si es así. Luego, divide el texto en palabras, suma sus longitudes y calcula la longitud promedio. El resultado se redondea a 2 decimales y se devuelve como un número de punto flotante.
 
-- [ ] **Uso de HTML semántico**
 
-  <details><summary>Links</summary><p>
 
-  * [HTML semántico](https://curriculum.laboratoria.la/es/topics/html/02-html5/02-semantic-html)
-  * [Semantics - MDN Web Docs Glossary](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-</p></details>
 
-### CSS
 
-- [ ] **Uso de selectores de CSS**
 
-  <details><summary>Links</summary><p>
 
-  * [Intro a CSS](https://curriculum.laboratoria.la/es/topics/css/01-css/01-intro-css)
-  * [CSS Selectors - MDN](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors)
-</p></details>
 
-- [ ] **Modelo de caja (box model): borde, margen, padding**
 
-  <details><summary>Links</summary><p>
 
-  * [Box Model & Display](https://curriculum.laboratoria.la/es/topics/css/01-css/02-boxmodel-and-display)
-  * [The box model - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-  * [Introduction to the CSS box model - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  * [CSS display - MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/display)
-  * [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
-</p></details>
 
-### Web APIs
 
-- [ ] **Uso de selectores del DOM**
 
-  <details><summary>Links</summary><p>
 
-  * [Manipulación del DOM](https://curriculum.laboratoria.la/es/topics/browser/02-dom/03-1-dom-methods-selection)
-  * [Introducción al DOM - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
-  * [Localizando elementos DOM usando selectores - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
-</p></details>
 
-- [ ] **Manejo de eventos del DOM (listeners, propagación, delegación)**
 
-  <details><summary>Links</summary><p>
 
-  * [Introducción a eventos - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Events)
-  * [EventTarget.addEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener)
-  * [EventTarget.removeEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/removeEventListener)
-  * [El objeto Event](https://developer.mozilla.org/es/docs/Web/API/Event)
-</p></details>
 
-- [ ] **Manipulación dinámica del DOM**
 
-  <details><summary>Links</summary><p>
 
-  * [Introducción al DOM](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
-  * [Node.appendChild() - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/appendChild)
-  * [Document.createElement() - MDN](https://developer.mozilla.org/es/docs/Web/API/Document/createElement)
-  * [Document.createTextNode()](https://developer.mozilla.org/es/docs/Web/API/Document/createTextNode)
-  * [Element.innerHTML - MDN](https://developer.mozilla.org/es/docs/Web/API/Element/innerHTML)
-  * [Node.textContent - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/textContent)
-</p></details>
 
-### JavaScript
 
-- [ ] **Tipos de datos primitivos**
+ 
 
-  <details><summary>Links</summary><p>
-
-  * [Valores primitivos - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Data_structures#valores_primitivos)
-</p></details>
-
-- [ ] **Strings (cadenas de caracteres)**
-
-  <details><summary>Links</summary><p>
-
-  * [Strings](https://curriculum.laboratoria.la/es/topics/javascript/06-strings)
-  * [String — Cadena de caracteres - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String)
-</p></details>
-
-- [ ] **Variables (declaración, asignación, ámbito)**
-
-  <details><summary>Links</summary><p>
-
-  * [Valores, tipos de datos y operadores](https://curriculum.laboratoria.la/es/topics/javascript/01-basics/01-values-variables-and-types)
-  * [Variables](https://curriculum.laboratoria.la/es/topics/javascript/01-basics/02-variables)
-</p></details>
-
-- [ ] **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
-
-  <details><summary>Links</summary><p>
-
-  * [Estructuras condicionales y repetitivas](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/01-conditionals-and-loops)
-  * [Tomando decisiones en tu código — condicionales - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/conditionals)
-</p></details>
-
-- [ ] **Uso de bucles/ciclos (while, for, for..of)**
-
-  <details><summary>Links</summary><p>
-
-  * [Bucles (Loops)](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/02-loops)
-  * [Bucles e iteración - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Loops_and_iteration)
-</p></details>
-
-- [ ] **Funciones (params, args, return)**
-
-  <details><summary>Links</summary><p>
-
-  * [Funciones (control de flujo)](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/03-functions)
-  * [Funciones clásicas](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/01-classic)
-  * [Arrow Functions](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/02-arrow)
-  * [Funciones — bloques de código reutilizables - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Functions)
-</p></details>
-
-- [ ] **Pruebas unitarias (unit tests)**
-
-  <details><summary>Links</summary><p>
-
-  * [Empezando con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/getting-started)
-</p></details>
-
-- [ ] **Módulos de ECMAScript (ES Modules)**
-
-  <details><summary>Links</summary><p>
-
-  * [import - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/import)
-  * [export - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/export)
-</p></details>
-
-- [ ] **Uso de linter (ESLINT)**
-
-- [ ] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
-
-### Control de Versiones (Git y GitHub)
-
-- [ ] **Git: Instalación y configuración**
-
-- [ ] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
-
-- [ ] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
-
-- [ ] **GitHub: Despliegue con GitHub Pages**
-
-  <details><summary>Links</summary><p>
-
-  * [Sitio oficial de GitHub Pages](https://pages.github.com/)
-</p></details>
-
-### Centrado en el usuario
-
-- [ ] **Diseñar y desarrollar un producto o servicio poniendo a las usuarias en el centro**
-
-### Diseño de producto
-
-- [ ] **Diseñar en distintos niveles de fidelidad**
-
-- [ ] **Seguir los principios básicos de diseño visual**
-
-## 10. Funcionalidades opcionales
-
-Si terminaste con todas las [funcionalidades requeridas](#3-funcionalidades),
-intenta implementar las siguientes funcionalidades opcionales para
-profundizar en los objetivos de aprendizaje del proyecto:
-
-* Que el recuento de palabras y caracteres sea 0 para una entrada de
-  texto vacía.
-* Que el recuento de palabras y caracteres sea 0 para una entrada de
-  texto con solo espacios.
-* Que el recuento de palabras y caracteres sea 0 para una entrada de
-  texto con solo caracteres de puntuación.
-
-Puedes habilitar las pruebas unitarias y en _end to end_ de estos casos
-en los archivos [test/analyzer.spec.js](test/analyzer.spec.js) y
-[read-only/test/e2e/app.spec.js](read-only/test/e2e/app.spec.js).
